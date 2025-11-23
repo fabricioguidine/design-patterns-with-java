@@ -257,16 +257,3 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 - Built with Java and Maven
 - Tested with JUnit 5
 
-## 👤 Author
-
-[@fabricioguidine](https://github.com/fabricioguidine)
-
-## 📞 Contact
-
-For questions or suggestions, please open an issue on GitHub.
-
----
-
-**Made with ❤️ for the Java community**
-
-
