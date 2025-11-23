@@ -251,9 +251,4 @@ Contributions are welcome! Please follow these guidelines:
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
-## 🙏 Acknowledgments
-
-- Design patterns based on the classic "Design Patterns: Elements of Reusable Object-Oriented Software" by the Gang of Four
-- Built with Java and Maven
-- Tested with JUnit 5
 
