@@ -9,7 +9,7 @@ public class ServiceFactory {
     /**
      * Gets a service instance by name.
      * 
-     * @param service the service name (e.g., "Boleto", "Pix", "Cartao", "Saldo")
+     * @param service the service name (e.g., "Invoice", "Pix", "Card", "Balance")
      * @return the service instance
      * @throws IllegalArgumentException if service does not exist or is invalid
      */
