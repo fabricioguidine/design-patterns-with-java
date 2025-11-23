@@ -15,7 +15,7 @@ class EmployeeTest {
     @DisplayName("Should clone employee with deep copy of declaration")
     void shouldCloneEmployeeWithDeepCopyOfDeclaration() throws CloneNotSupportedException {
         // Arrange
-        Employee employee = new Employee(9999, "Marco Antônio", new Declaration("Juiz de Fora", 1));
+        Employee employee = new Employee(9999, "John Smith", new Declaration("New York", 1));
 
         // Act
         Employee employeeClone = employee.clone();
@@ -23,9 +23,9 @@ class EmployeeTest {
         employeeClone.setName("Cloned Employee");
 
         // Assert
-        assertEquals("Employee{registrationNumber=9999, name='Marco Antônio', declaration=Declaration{city='Juiz de Fora', registrationNumber=1}}", 
+        assertEquals("Employee{registrationNumber=9999, name='John Smith', declaration=Declaration{city='New York', registrationNumber=1}}", 
             employee.toString());
-        assertEquals("Employee{registrationNumber=999, name='Cloned Employee', declaration=Declaration{city='Juiz de Fora', registrationNumber=1}}", 
+        assertEquals("Employee{registrationNumber=999, name='Cloned Employee', declaration=Declaration{city='New York', registrationNumber=1}}", 
             employeeClone.toString());
     }
     

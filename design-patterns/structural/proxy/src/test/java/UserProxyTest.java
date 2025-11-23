@@ -14,8 +14,8 @@ import static org.junit.jupiter.api.Assertions.*;
 class UserProxyTest {
     @BeforeEach
     void setUp() {
-        Database.addUser(new User("Peter", "Belo Horizonte", "12345678", "peter@example.com", "111-111-111-11"));
-        Database.addUser(new User("Ana", "São Paulo", "87654321", "ana@example.com", "999-99-999-99"));
+        Database.addUser(new User("Peter", "New York", "12345678", "peter@example.com", "111-111-111-11"));
+        Database.addUser(new User("Ana", "Los Angeles", "87654321", "ana@example.com", "999-99-999-99"));
     }
     
     @Test
@@ -28,7 +28,7 @@ class UserProxyTest {
         var result = user.getPersonalData();
         
         // Assert
-        assertEquals(Arrays.asList("Peter", "Belo Horizonte", "111-111-111-11"), result);
+        assertEquals(Arrays.asList("Peter", "New York", "111-111-111-11"), result);
     }
     
     @Test

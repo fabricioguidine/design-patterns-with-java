@@ -15,21 +15,21 @@ class CompanyTest {
     @DisplayName("Should return company employees hierarchy")
     void shouldReturnCompanyEmployeesHierarchy() {
         // Arrange
-        Manager manager123 = new Manager("Alice Silva", "111.222.333-44", "HR Director");
-        Collaborator collaborator789 = new Collaborator("João da Silva", "222.333.444-55", "HR Analyst");
-        Collaborator collaborator012 = new Collaborator("Maria Santos", "333.444.555-66", "Recruitment Analyst");
+        Manager manager123 = new Manager("Alice Smith", "111.222.333-44", "HR Director");
+        Collaborator collaborator789 = new Collaborator("John Smith", "222.333.444-55", "HR Analyst");
+        Collaborator collaborator012 = new Collaborator("Mary Johnson", "333.444.555-66", "Recruitment Analyst");
         manager123.addSubordinate(collaborator789);
         manager123.addSubordinate(collaborator012);
         
-        Manager manager456 = new Manager("Carlos Pereira", "444.555.666-77", "Communications Director");
-        Manager manager789 = new Manager("Laura Ferreira", "555.666.777-88", "Marketing Director");
-        Collaborator collaborator234 = new Collaborator("Rafael Oliveira", "666.777.888-99", "Advertiser");
-        Collaborator collaborator567 = new Collaborator("Mariana Lima", "777.888.999-00", "Social Media");
+        Manager manager456 = new Manager("Carl Williams", "444.555.666-77", "Communications Director");
+        Manager manager789 = new Manager("Laura Brown", "555.666.777-88", "Marketing Director");
+        Collaborator collaborator234 = new Collaborator("Robert Davis", "666.777.888-99", "Advertiser");
+        Collaborator collaborator567 = new Collaborator("Mary Wilson", "777.888.999-00", "Social Media");
         manager789.addSubordinate(collaborator234);
         manager789.addSubordinate(collaborator567);
         manager456.addSubordinate(manager789);
         
-        Manager ceo = new Manager("Pedro Souza", "888.999.000-11", "CEO");
+        Manager ceo = new Manager("Peter Taylor", "888.999.000-11", "CEO");
         ceo.addSubordinate(manager123);
         ceo.addSubordinate(manager456);
         
@@ -40,14 +40,14 @@ class CompanyTest {
         String result = company.getEmployees();
         
         // Assert
-        String expected = "Manager: Pedro Souza / CEO / 888.999.000-11\n" +
-                "Manager: Alice Silva / HR Director / 111.222.333-44\n" +
-                "Collaborator: João da Silva / HR Analyst / 222.333.444-55\n" +
-                "Collaborator: Maria Santos / Recruitment Analyst / 333.444.555-66\n" +
-                "Manager: Carlos Pereira / Communications Director / 444.555.666-77\n" +
-                "Manager: Laura Ferreira / Marketing Director / 555.666.777-88\n" +
-                "Collaborator: Rafael Oliveira / Advertiser / 666.777.888-99\n" +
-                "Collaborator: Mariana Lima / Social Media / 777.888.999-00\n";
+        String expected = "Manager: Peter Taylor / CEO / 888.999.000-11\n" +
+                "Manager: Alice Smith / HR Director / 111.222.333-44\n" +
+                "Collaborator: John Smith / HR Analyst / 222.333.444-55\n" +
+                "Collaborator: Mary Johnson / Recruitment Analyst / 333.444.555-66\n" +
+                "Manager: Carl Williams / Communications Director / 444.555.666-77\n" +
+                "Manager: Laura Brown / Marketing Director / 555.666.777-88\n" +
+                "Collaborator: Robert Davis / Advertiser / 666.777.888-99\n" +
+                "Collaborator: Mary Wilson / Social Media / 777.888.999-00\n";
         assertEquals(expected, result);
     }
 
