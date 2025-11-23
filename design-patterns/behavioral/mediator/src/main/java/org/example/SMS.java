@@ -2,24 +2,39 @@ package org.example;
 
 import java.util.ArrayList;
 import java.util.List;
-public class SMS implements Mediator {
-    private List<Destinatario> destinatarios;
 
+/**
+ * SMS mediator implementation for the Mediator pattern.
+ * 
+ * @version 1.0
+ */
+public class SMS implements Mediator {
+    private List<Recipient> recipients;
+
+    /**
+     * Constructs a new SMS mediator.
+     */
     public SMS() {
-        this.destinatarios = new ArrayList<>();
+        this.recipients = new ArrayList<>();
     }
 
     @Override
-    public void enviar(String mensagem, Destinatario destinatario) {
-        for (Destinatario d : destinatarios) {
-            if (d != destinatario) {
-                d.receberMensagem(mensagem);
+    public void send(String message, Recipient sender) {
+        if (message == null) {
+            throw new IllegalArgumentException("Message cannot be null");
+        }
+        for (Recipient recipient : recipients) {
+            if (recipient != sender) {
+                recipient.receiveMessage(message);
             }
         }
     }
 
     @Override
-    public void adicionarDestinatario(Destinatario destinatario) {
-        this.destinatarios.add(destinatario);
+    public void addRecipient(Recipient recipient) {
+        if (recipient == null) {
+            throw new IllegalArgumentException("Recipient cannot be null");
+        }
+        this.recipients.add(recipient);
     }
 }
