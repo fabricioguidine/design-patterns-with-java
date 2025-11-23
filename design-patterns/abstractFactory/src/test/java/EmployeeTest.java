@@ -11,7 +11,7 @@ import static org.junit.jupiter.api.Assertions.*;
  * Tests verify that the factory correctly creates families of related objects
  * for different employee types (internal and outsourced).
  * 
- * @author Design Patterns Implementation
+ * @author fabricioguidine
  * @version 1.0
  */
 @DisplayName("Abstract Factory Pattern Tests")

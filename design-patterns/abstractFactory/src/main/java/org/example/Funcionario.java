@@ -5,7 +5,7 @@ package org.example;
  * This class demonstrates how the Abstract Factory pattern allows creating families
  * of related objects (Payroll and Report) without knowing their concrete classes.
  * 
- * @author Design Patterns Implementation
+ * @author fabricioguidine
  * @version 1.0
  */
 public class Employee {

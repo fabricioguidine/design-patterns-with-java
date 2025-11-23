@@ -4,7 +4,7 @@ package org.example;
  * Concrete implementation of Report for internal employees.
  * This class provides report information specific to internal employees.
  * 
- * @author Design Patterns Implementation
+ * @author fabricioguidine
  * @version 1.0
  */
 public class InternalEmployeeReport implements Report {

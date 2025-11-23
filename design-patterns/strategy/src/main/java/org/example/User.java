@@ -9,7 +9,7 @@ package org.example;
  * and makes them interchangeable. This allows the algorithm to vary independently
  * from clients that use it.
  * 
- * @author Design Patterns Implementation
+ * @author fabricioguidine
  * @version 1.0
  */
 public class User {

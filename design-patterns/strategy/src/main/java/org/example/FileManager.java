@@ -5,7 +5,7 @@ package org.example;
  * This class delegates the actual saving logic to the strategy object,
  * allowing different algorithms to be used interchangeably.
  * 
- * @author Design Patterns Implementation
+ * @author fabricioguidine
  * @version 1.0
  */
 public class FileManager {

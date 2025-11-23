@@ -10,7 +10,7 @@ package org.example;
  * when the class is loaded. For thread-safe lazy initialization, consider using
  * double-checked locking or the Initialization-on-demand holder idiom.
  * 
- * @author Design Patterns Implementation
+ * @author fabricioguidine
  * @version 1.0
  */
 public class DatabaseConnection {

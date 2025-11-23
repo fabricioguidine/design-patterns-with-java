@@ -14,7 +14,7 @@ import static org.junit.jupiter.api.Assertions.*;
  * Tests verify that different file saving strategies work correctly
  * and can be used interchangeably.
  * 
- * @author Design Patterns Implementation
+ * @author fabricioguidine
  * @version 1.0
  */
 @DisplayName("Strategy Pattern Tests")

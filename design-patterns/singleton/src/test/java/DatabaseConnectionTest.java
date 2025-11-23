@@ -8,7 +8,7 @@ import static org.junit.jupiter.api.Assertions.*;
  * Tests verify that only one instance exists and that it behaves correctly
  * across multiple calls to getInstance().
  * 
- * @author Design Patterns Implementation
+ * @author fabricioguidine
  * @version 1.0
  */
 @DisplayName("Singleton Pattern Tests")

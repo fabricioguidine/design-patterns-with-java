@@ -5,7 +5,7 @@ package org.example;
  * This factory creates a family of products (Payroll and Report) specifically
  * designed for internal employees.
  * 
- * @author Design Patterns Implementation
+ * @author fabricioguidine
  * @version 1.0
  */
 public class InternalEmployeeFactory implements AbstractFactory {

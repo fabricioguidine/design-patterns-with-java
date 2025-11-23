@@ -6,7 +6,7 @@ package org.example;
  * The Strategy pattern allows selecting algorithms at runtime, making the system
  * more flexible and extensible.
  * 
- * @author Design Patterns Implementation
+ * @author fabricioguidine
  * @version 1.0
  */
 public interface FileFormat {
