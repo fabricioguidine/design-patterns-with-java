@@ -27,33 +27,33 @@
     
     <modules>
         <!-- Creational Patterns -->
-        <module>design-patterns/abstractFactory</module>
-        <module>design-patterns/builder</module>
-        <module>design-patterns/factoryMethod</module>
-        <module>design-patterns/prototype</module>
-        <module>design-patterns/singleton</module>
+        <module>design-patterns/creational/abstractFactory</module>
+        <module>design-patterns/creational/builder</module>
+        <module>design-patterns/creational/factoryMethod</module>
+        <module>design-patterns/creational/prototype</module>
+        <module>design-patterns/creational/singleton</module>
         
         <!-- Structural Patterns -->
-        <module>design-patterns/adapter</module>
-        <module>design-patterns/bridge</module>
-        <module>design-patterns/composite</module>
-        <module>design-patterns/decorator</module>
-        <module>design-patterns/facade</module>
-        <module>design-patterns/flyweight</module>
-        <module>design-patterns/proxy</module>
+        <module>design-patterns/structural/adapter</module>
+        <module>design-patterns/structural/bridge</module>
+        <module>design-patterns/structural/composite</module>
+        <module>design-patterns/structural/decorator</module>
+        <module>design-patterns/structural/facade</module>
+        <module>design-patterns/structural/flyweight</module>
+        <module>design-patterns/structural/proxy</module>
         
         <!-- Behavioral Patterns -->
-        <module>design-patterns/chainOfResponsibility</module>
-        <module>design-patterns/command</module>
-        <module>design-patterns/interpreter</module>
-        <module>design-patterns/iterator</module>
-        <module>design-patterns/mediator</module>
-        <module>design-patterns/memento</module>
-        <module>design-patterns/observer</module>
-        <module>design-patterns/state</module>
-        <module>design-patterns/strategy</module>
-        <module>design-patterns/templateMethod</module>
-        <module>design-patterns/visitor</module>
+        <module>design-patterns/behavioral/chainOfResponsibility</module>
+        <module>design-patterns/behavioral/command</module>
+        <module>design-patterns/behavioral/interpreter</module>
+        <module>design-patterns/behavioral/iterator</module>
+        <module>design-patterns/behavioral/mediator</module>
+        <module>design-patterns/behavioral/memento</module>
+        <module>design-patterns/behavioral/observer</module>
+        <module>design-patterns/behavioral/state</module>
+        <module>design-patterns/behavioral/strategy</module>
+        <module>design-patterns/behavioral/templateMethod</module>
+        <module>design-patterns/behavioral/visitor</module>
     </modules>
     
     <dependencyManagement>

@@ -7,37 +7,37 @@ This directory contains implementations of all 23 classic GoF (Gang of Four) des
 ### Creational Patterns (5)
 These patterns provide various object creation mechanisms, which increase flexibility and reuse of existing code.
 
-- **[Abstract Factory](abstractFactory/)** - Provides an interface for creating families of related objects
-- **[Builder](builder/)** - Constructs complex objects step by step
-- **[Factory Method](factoryMethod/)** - Creates objects without specifying the exact class
-- **[Prototype](prototype/)** - Creates objects by cloning existing instances
-- **[Singleton](singleton/)** - Ensures a class has only one instance
+- **[Abstract Factory](creational/abstractFactory/)** - Provides an interface for creating families of related objects
+- **[Builder](creational/builder/)** - Constructs complex objects step by step
+- **[Factory Method](creational/factoryMethod/)** - Creates objects without specifying the exact class
+- **[Prototype](creational/prototype/)** - Creates objects by cloning existing instances
+- **[Singleton](creational/singleton/)** - Ensures a class has only one instance
 
 ### Structural Patterns (7)
 These patterns explain how to assemble objects and classes into larger structures while keeping these structures flexible and efficient.
 
-- **[Adapter](adapter/)** - Allows incompatible interfaces to work together
-- **[Bridge](bridge/)** - Separates abstraction from implementation
-- **[Composite](composite/)** - Composes objects into tree structures
-- **[Decorator](decorator/)** - Adds behavior to objects dynamically
-- **[Facade](facade/)** - Provides a simplified interface to a complex subsystem
-- **[Flyweight](flyweight/)** - Shares state to support large numbers of fine-grained objects
-- **[Proxy](proxy/)** - Provides a placeholder for another object
+- **[Adapter](structural/adapter/)** - Allows incompatible interfaces to work together
+- **[Bridge](structural/bridge/)** - Separates abstraction from implementation
+- **[Composite](structural/composite/)** - Composes objects into tree structures
+- **[Decorator](structural/decorator/)** - Adds behavior to objects dynamically
+- **[Facade](structural/facade/)** - Provides a simplified interface to a complex subsystem
+- **[Flyweight](structural/flyweight/)** - Shares state to support large numbers of fine-grained objects
+- **[Proxy](structural/proxy/)** - Provides a placeholder for another object
 
 ### Behavioral Patterns (11)
 These patterns are concerned with algorithms and the assignment of responsibilities between objects.
 
-- **[Chain of Responsibility](chainOfResponsability/)** - Passes requests along a chain of handlers
-- **[Command](command/)** - Encapsulates requests as objects
-- **[Interpreter](interpreter/)** - Defines a representation for grammar and an interpreter
-- **[Iterator](iterator/)** - Provides a way to access elements of a collection
-- **[Mediator](mediator/)** - Defines how objects interact with each other
-- **[Memento](memento/)** - Captures and restores an object's internal state
-- **[Observer](observer/)** - Notifies multiple objects about state changes
-- **[State](state/)** - Allows an object to alter its behavior when its internal state changes
-- **[Strategy](strategy/)** - Defines a family of algorithms and makes them interchangeable
-- **[Template Method](templateMethod/)** - Defines the skeleton of an algorithm
-- **[Visitor](visitor/)** - Separates algorithms from the objects they operate on
+- **[Chain of Responsibility](behavioral/chainOfResponsibility/)** - Passes requests along a chain of handlers
+- **[Command](behavioral/command/)** - Encapsulates requests as objects
+- **[Interpreter](behavioral/interpreter/)** - Defines a representation for grammar and an interpreter
+- **[Iterator](behavioral/iterator/)** - Provides a way to access elements of a collection
+- **[Mediator](behavioral/mediator/)** - Defines how objects interact with each other
+- **[Memento](behavioral/memento/)** - Captures and restores an object's internal state
+- **[Observer](behavioral/observer/)** - Notifies multiple objects about state changes
+- **[State](behavioral/state/)** - Allows an object to alter its behavior when its internal state changes
+- **[Strategy](behavioral/strategy/)** - Defines a family of algorithms and makes them interchangeable
+- **[Template Method](behavioral/templateMethod/)** - Defines the skeleton of an algorithm
+- **[Visitor](behavioral/visitor/)** - Separates algorithms from the objects they operate on
 
 ## 🏗️ Structure
 
@@ -58,7 +58,7 @@ Each pattern can be built and tested independently:
 
 ```bash
 # Navigate to a specific pattern
-cd design-patterns/abstractFactory
+cd design-patterns/creational/abstractFactory
 
 # Build the pattern
 mvn clean install
