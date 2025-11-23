@@ -56,7 +56,7 @@ This repository contains well-structured, production-ready implementations of al
 
 | Pattern | Description | Status |
 |---------|-------------|--------|
-| [Chain of Responsibility](design-patterns/chainOfResponsability) | Passes requests along a chain of handlers | ✅ |
+| [Chain of Responsibility](design-patterns/chainOfResponsibility) | Passes requests along a chain of handlers | ✅ |
 | [Command](design-patterns/command) | Encapsulates requests as objects | ✅ |
 | [Interpreter](design-patterns/interpreter) | Defines a representation for grammar and an interpreter | ✅ |
 | [Iterator](design-patterns/iterator) | Provides a way to access elements of a collection | ✅ |
