@@ -267,5 +267,6 @@ For questions or suggestions, please open an issue on GitHub.
 
 ---
 
-**Made with ❤️ by [fabricioguidine](https://github.com/fabricioguidine) for the Java community**
+**Made with ❤️ for the Java community**
+
 
