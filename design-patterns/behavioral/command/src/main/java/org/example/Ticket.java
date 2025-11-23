@@ -1,26 +1,61 @@
 package org.example;
 
+/**
+ * Represents a support ticket with protocol, subject, and client information.
+ * 
+ * @version 1.0
+ */
 public class Ticket {
-    private int protocolo;
-    private String assunto;
-    private String nomeCliente;
-    private String situacao;
+    private int protocol;
+    private String subject;
+    private String clientName;
+    private String status;
 
-    public Ticket(int protocolo, String assunto, String nomeCliente) {
-        this.protocolo = protocolo;
-        this.assunto = assunto;
-        this.nomeCliente = nomeCliente;
+    /**
+     * Constructs a new Ticket.
+     * 
+     * @param protocol the ticket protocol number
+     * @param subject the ticket subject
+     * @param clientName the client name
+     */
+    public Ticket(int protocol, String subject, String clientName) {
+        this.protocol = protocol;
+        this.subject = subject;
+        this.clientName = clientName;
     }
 
-    public String getSituacao() {
-        return situacao;
+    /**
+     * Gets the ticket status.
+     * 
+     * @return the current status
+     */
+    public String getStatus() {
+        return status;
     }
 
-    public void abrirTicket(){
-        this.situacao = "Reclamacao aberta";
+    /**
+     * Opens the ticket.
+     */
+    public void openTicket() {
+        this.status = "Complaint opened";
     }
 
-    public void fecharTicket(){
-        this.situacao = "Reclamacao fechada";
+    /**
+     * Closes the ticket.
+     */
+    public void closeTicket() {
+        this.status = "Complaint closed";
+    }
+
+    public int getProtocol() {
+        return protocol;
+    }
+
+    public String getSubject() {
+        return subject;
+    }
+
+    public String getClientName() {
+        return clientName;
     }
 }

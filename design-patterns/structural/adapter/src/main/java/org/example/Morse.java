@@ -1,26 +1,47 @@
 package org.example;
 
+/**
+ * Client class that uses the Adapter pattern to work with Morse code numbers.
+ * 
+ * @version 1.0
+ */
 public class Morse {
+    private INumber number;
+    private NumberAdapter adapter;
 
-    INumero numero;
-    NumeroAdapter persistencia;
-
+    /**
+     * Constructs a new Morse instance with default adapter setup.
+     */
     public Morse() {
-        numero = new NumeroMorse();
-        persistencia = new NumeroAdapter(numero);
+        number = new MorseNumber();
+        adapter = new NumberAdapter(number);
     }
 
-    public void setNumero(String morse) {
-        numero.setNumero(morse);
-        persistencia.salvarNumero();
+    /**
+     * Sets the number in Morse code format.
+     * 
+     * @param morse the Morse code string
+     */
+    public void setNumber(String morse) {
+        number.setNumber(morse);
+        adapter.saveNumber();
     }
 
-    public String getNumero() {
-        return persistencia.recuperarNumero();
+    /**
+     * Gets the number in Morse code format.
+     * 
+     * @return the Morse code string representation
+     */
+    public String getNumber() {
+        return adapter.retrieveNumber();
     }
 
-    public float getNum() {
-        return persistencia.getNum();
+    /**
+     * Gets the integer value of the number.
+     * 
+     * @return the integer value
+     */
+    public int getNum() {
+        return adapter.getNum();
     }
 }
-
