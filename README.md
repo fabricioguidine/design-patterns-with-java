@@ -34,53 +34,71 @@ This repository contains well-structured, production-ready implementations of al
 
 | Pattern | Description | Status |
 |---------|-------------|--------|
-| [Abstract Factory](design-patterns/abstractFactory) | Provides an interface for creating families of related objects | ✅ |
-| [Builder](design-patterns/builder) | Constructs complex objects step by step | ✅ |
-| [Factory Method](design-patterns/factoryMethod) | Creates objects without specifying the exact class | ✅ |
-| [Prototype](design-patterns/prototype) | Creates objects by cloning existing instances | ✅ |
-| [Singleton](design-patterns/singleton) | Ensures a class has only one instance | ✅ |
+| [Abstract Factory](design-patterns/creational/abstractFactory) | Provides an interface for creating families of related objects | ✅ |
+| [Builder](design-patterns/creational/builder) | Constructs complex objects step by step | ✅ |
+| [Factory Method](design-patterns/creational/factoryMethod) | Creates objects without specifying the exact class | ✅ |
+| [Prototype](design-patterns/creational/prototype) | Creates objects by cloning existing instances | ✅ |
+| [Singleton](design-patterns/creational/singleton) | Ensures a class has only one instance | ✅ |
 
 ### Structural Patterns
 
 | Pattern | Description | Status |
 |---------|-------------|--------|
-| [Adapter](design-patterns/adapter) | Allows incompatible interfaces to work together | ✅ |
-| [Bridge](design-patterns/bridge) | Separates abstraction from implementation | ✅ |
-| [Composite](design-patterns/composite) | Composes objects into tree structures | ✅ |
-| [Decorator](design-patterns/decorator) | Adds behavior to objects dynamically | ✅ |
-| [Facade](design-patterns/facade) | Provides a simplified interface to a complex subsystem | ✅ |
-| [Flyweight](design-patterns/flyweight) | Shares state to support large numbers of fine-grained objects | ✅ |
-| [Proxy](design-patterns/proxy) | Provides a placeholder for another object | ✅ |
+| [Adapter](design-patterns/structural/adapter) | Allows incompatible interfaces to work together | ✅ |
+| [Bridge](design-patterns/structural/bridge) | Separates abstraction from implementation | ✅ |
+| [Composite](design-patterns/structural/composite) | Composes objects into tree structures | ✅ |
+| [Decorator](design-patterns/structural/decorator) | Adds behavior to objects dynamically | ✅ |
+| [Facade](design-patterns/structural/facade) | Provides a simplified interface to a complex subsystem | ✅ |
+| [Flyweight](design-patterns/structural/flyweight) | Shares state to support large numbers of fine-grained objects | ✅ |
+| [Proxy](design-patterns/structural/proxy) | Provides a placeholder for another object | ✅ |
 
 ### Behavioral Patterns
 
 | Pattern | Description | Status |
 |---------|-------------|--------|
-| [Chain of Responsibility](design-patterns/chainOfResponsibility) | Passes requests along a chain of handlers | ✅ |
-| [Command](design-patterns/command) | Encapsulates requests as objects | ✅ |
-| [Interpreter](design-patterns/interpreter) | Defines a representation for grammar and an interpreter | ✅ |
-| [Iterator](design-patterns/iterator) | Provides a way to access elements of a collection | ✅ |
-| [Mediator](design-patterns/mediator) | Defines how objects interact with each other | ✅ |
-| [Memento](design-patterns/memento) | Captures and restores an object's internal state | ✅ |
-| [Observer](design-patterns/observer) | Notifies multiple objects about state changes | ✅ |
-| [State](design-patterns/state) | Allows an object to alter its behavior when its internal state changes | ✅ |
-| [Strategy](design-patterns/strategy) | Defines a family of algorithms and makes them interchangeable | ✅ |
-| [Template Method](design-patterns/templateMethod) | Defines the skeleton of an algorithm | ✅ |
-| [Visitor](design-patterns/visitor) | Separates algorithms from the objects they operate on | ✅ |
+| [Chain of Responsibility](design-patterns/behavioral/chainOfResponsibility) | Passes requests along a chain of handlers | ✅ |
+| [Command](design-patterns/behavioral/command) | Encapsulates requests as objects | ✅ |
+| [Interpreter](design-patterns/behavioral/interpreter) | Defines a representation for grammar and an interpreter | ✅ |
+| [Iterator](design-patterns/behavioral/iterator) | Provides a way to access elements of a collection | ✅ |
+| [Mediator](design-patterns/behavioral/mediator) | Defines how objects interact with each other | ✅ |
+| [Memento](design-patterns/behavioral/memento) | Captures and restores an object's internal state | ✅ |
+| [Observer](design-patterns/behavioral/observer) | Notifies multiple objects about state changes | ✅ |
+| [State](design-patterns/behavioral/state) | Allows an object to alter its behavior when its internal state changes | ✅ |
+| [Strategy](design-patterns/behavioral/strategy) | Defines a family of algorithms and makes them interchangeable | ✅ |
+| [Template Method](design-patterns/behavioral/templateMethod) | Defines the skeleton of an algorithm | ✅ |
+| [Visitor](design-patterns/behavioral/visitor) | Separates algorithms from the objects they operate on | ✅ |
 
 ## 📁 Project Structure
 
 ```
 repository-organizer/
 ├── design-patterns/
-│   ├── abstractFactory/
-│   │   ├── pom.xml
-│   │   ├── src/
-│   │   │   ├── main/java/org/example/
-│   │   │   └── test/java/
-│   ├── adapter/
-│   ├── bridge/
-│   ├── ... (other patterns)
+│   ├── creational/
+│   │   ├── abstractFactory/
+│   │   ├── builder/
+│   │   ├── factoryMethod/
+│   │   ├── prototype/
+│   │   └── singleton/
+│   ├── structural/
+│   │   ├── adapter/
+│   │   ├── bridge/
+│   │   ├── composite/
+│   │   ├── decorator/
+│   │   ├── facade/
+│   │   ├── flyweight/
+│   │   └── proxy/
+│   ├── behavioral/
+│   │   ├── chainOfResponsibility/
+│   │   ├── command/
+│   │   ├── interpreter/
+│   │   ├── iterator/
+│   │   ├── mediator/
+│   │   ├── memento/
+│   │   ├── observer/
+│   │   ├── state/
+│   │   ├── strategy/
+│   │   ├── templateMethod/
+│   │   └── visitor/
 │   └── README.md
 ├── .gitignore
 ├── LICENSE
@@ -135,7 +153,7 @@ mvn clean install
 Navigate to a specific pattern directory and build:
 
 ```bash
-cd design-patterns/abstractFactory
+cd design-patterns/creational/abstractFactory
 mvn clean install
 ```
 
@@ -156,14 +174,14 @@ mvn test
 ### Run Tests for Specific Pattern
 
 ```bash
-cd design-patterns/singleton
+cd design-patterns/creational/singleton
 mvn test
 ```
 
 ### Run Specific Test Class
 
 ```bash
-cd design-patterns/abstractFactory
+cd design-patterns/creational/abstractFactory
 mvn test -Dtest=EmployeeTest
 ```
 
