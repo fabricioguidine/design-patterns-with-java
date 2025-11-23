@@ -57,7 +57,7 @@ class UserProxyTest {
             IllegalArgumentException.class,
             () -> user.getContacts(admin)
         );
-        assertEquals("Login not performed.", exception.getMessage());
+        assertEquals("Login not performed", exception.getMessage());
     }
 }
 

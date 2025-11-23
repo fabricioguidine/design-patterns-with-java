@@ -37,7 +37,7 @@ public class UserProxy implements IUser {
             throw new IllegalArgumentException("Administrator cannot be null");
         }
         if (!administrator.isValid()) {
-            throw new IllegalArgumentException("Login not performed.");
+            throw new IllegalArgumentException("Login not performed");
         }
         if (this.user == null) {
             this.user = new User(this.cpf);
