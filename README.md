@@ -367,10 +367,4 @@ If you find a bug or have a suggestion, please open an issue on GitHub with:
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
-## 📚 Additional Resources
-
-- 📖 [Design Patterns: Elements of Reusable Object-Oriented Software](https://en.wikipedia.org/wiki/Design_Patterns) - Original GoF book
-- ☕ [Java Documentation](https://docs.oracle.com/javase/) - Official Java documentation
-- 📦 [Maven Documentation](https://maven.apache.org/guides/) - Maven build tool documentation
-- 🧪 [JUnit 5 Documentation](https://junit.org/junit5/docs/current/user-guide/) - Testing framework documentation
 
