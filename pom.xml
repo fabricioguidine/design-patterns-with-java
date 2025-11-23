@@ -43,7 +43,7 @@
         <module>design-patterns/proxy</module>
         
         <!-- Behavioral Patterns -->
-        <module>design-patterns/chainOfResponsability</module>
+        <module>design-patterns/chainOfResponsibility</module>
         <module>design-patterns/command</module>
         <module>design-patterns/interpreter</module>
         <module>design-patterns/iterator</module>
