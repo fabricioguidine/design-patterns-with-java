@@ -16,18 +16,18 @@ class SMSTest {
     void shouldSendMessageToAllRecipientsExceptSender() {
         // Arrange
         Mediator mediator = new SMS();
-        Recipient ana = new User("Ana");
-        Recipient carlos = new User("Carlos");
-        Recipient isabel = new User("Isabel");
+        Recipient alice = new User("Alice");
+        Recipient bob = new User("Bob");
+        Recipient charlie = new User("Charlie");
 
-        mediator.addRecipient(ana);
-        mediator.addRecipient(carlos);
-        mediator.addRecipient(isabel);
+        mediator.addRecipient(alice);
+        mediator.addRecipient(bob);
+        mediator.addRecipient(charlie);
 
         // Act & Assert - This test verifies the mediator pattern works
         // The actual output would be to System.out, but we verify no exceptions are thrown
         assertDoesNotThrow(() -> {
-            mediator.send("Let's organize a dinner.", carlos);
+            mediator.send("Let's organize a dinner.", bob);
         });
     }
     
