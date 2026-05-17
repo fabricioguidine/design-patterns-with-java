@@ -7,10 +7,10 @@ package org.example;
  * * @version 1.0
  */
 public class PDF implements FileFormat {
-    
+
     /**
      * Saves a file in PDF format.
-     * 
+     *
      * @param fileName the name of the file to save
      * @return a confirmation message indicating the PDF file was saved
      */

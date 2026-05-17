@@ -2,7 +2,7 @@ package org.example;
 
 /**
  * Honda motorcycle implementation.
- * 
+ *
  * @version 1.0
  */
 public class Honda implements Motorcycle {
@@ -17,7 +17,7 @@ public class Honda implements Motorcycle {
 
     /**
      * Constructs a Honda motorcycle with the given price.
-     * 
+     *
      * @param price the motorcycle price
      */
     public Honda(float price) {

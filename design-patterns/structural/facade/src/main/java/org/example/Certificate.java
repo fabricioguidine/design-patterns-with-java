@@ -2,7 +2,7 @@ package org.example;
 
 /**
  * Certificate department singleton in the Facade pattern.
- * 
+ *
  * @version 1.0
  */
 public class Certificate extends Department {
@@ -12,11 +12,10 @@ public class Certificate extends Department {
 
     /**
      * Gets the singleton instance.
-     * 
+     *
      * @return the Certificate instance
      */
     public static Certificate getInstance() {
         return certificate;
     }
 }
-

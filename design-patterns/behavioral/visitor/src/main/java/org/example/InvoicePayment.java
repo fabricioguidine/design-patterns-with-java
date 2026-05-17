@@ -2,7 +2,7 @@ package org.example;
 
 /**
  * Invoice payment (Boleto) implementation.
- * 
+ *
  * @version 1.0
  */
 public class InvoicePayment implements Payment {
@@ -11,7 +11,7 @@ public class InvoicePayment implements Payment {
 
     /**
      * Constructs an InvoicePayment.
-     * 
+     *
      * @param barcode the invoice barcode
      * @param value the payment value
      */
@@ -42,4 +42,3 @@ public class InvoicePayment implements Payment {
         return visitor.displayInvoicePayment(this);
     }
 }
-

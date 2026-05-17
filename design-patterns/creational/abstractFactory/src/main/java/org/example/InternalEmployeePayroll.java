@@ -6,10 +6,10 @@ package org.example;
  * * @version 1.0
  */
 public class InternalEmployeePayroll implements Payroll {
-    
+
     /**
      * Generates and returns the payroll information for internal employees.
-     * 
+     *
      * @return a string containing the payroll information for internal employees
      */
     @Override
@@ -17,4 +17,3 @@ public class InternalEmployeePayroll implements Payroll {
         return "Payroll for Employee: Internal.";
     }
 }
-

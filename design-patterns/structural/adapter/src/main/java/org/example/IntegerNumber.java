@@ -2,7 +2,7 @@ package org.example;
 
 /**
  * Represents an integer number.
- * 
+ *
  * @version 1.0
  */
 public class IntegerNumber {
@@ -10,7 +10,7 @@ public class IntegerNumber {
 
     /**
      * Gets the integer value.
-     * 
+     *
      * @return the integer value
      */
     public int getNum() {
@@ -19,11 +19,10 @@ public class IntegerNumber {
 
     /**
      * Sets the integer value.
-     * 
+     *
      * @param num the integer value to set
      */
     public void setNum(int num) {
         this.num = num;
     }
 }
-

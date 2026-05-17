@@ -1,14 +1,15 @@
+import static org.junit.jupiter.api.Assertions.assertEquals;
+
+import java.util.Arrays;
+import java.util.List;
 import org.example.Library;
 import org.example.SupplierFactory;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
-import java.util.Arrays;
-import java.util.List;
-import static org.junit.jupiter.api.Assertions.assertEquals;
 
 /**
  * Test suite for the Flyweight pattern implementation.
- * 
+ *
  * @version 1.0
  */
 @DisplayName("Flyweight Pattern Tests")
@@ -32,8 +33,7 @@ class LibraryTest {
                 "Book{name=The Death of Ivan Ilyich, price=$1.9, supplierName=Penguin, supplierCity=New York, supplierState=NY}",
                 "Book{name=The Gay Science, price=$9.9, supplierName=Penguin, supplierCity=New York, supplierState=NY}",
                 "Book{name=Leviathan, price=$3.88, supplierName=HarperCollins, supplierCity=New York, supplierState=NY}",
-                "Book{name=Capital, price=$1600.0, supplierName=Oxford, supplierCity=Oxford, supplierState=UK}"
-        );
+                "Book{name=Capital, price=$1600.0, supplierName=Oxford, supplierCity=Oxford, supplierState=UK}");
 
         assertEquals(expected, result);
     }
@@ -55,4 +55,3 @@ class LibraryTest {
         assertEquals(3, count);
     }
 }
-

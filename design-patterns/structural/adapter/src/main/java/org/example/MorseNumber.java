@@ -2,7 +2,7 @@ package org.example;
 
 /**
  * Represents a number in Morse code format.
- * 
+ *
  * @version 1.0
  */
 public class MorseNumber implements INumber {
@@ -18,4 +18,3 @@ public class MorseNumber implements INumber {
         this.morse = morse;
     }
 }
-

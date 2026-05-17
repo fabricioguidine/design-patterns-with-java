@@ -2,7 +2,7 @@ package org.example;
 
 /**
  * Client class that uses the Adapter pattern to work with Morse code numbers.
- * 
+ *
  * @version 1.0
  */
 public class Morse {
@@ -19,7 +19,7 @@ public class Morse {
 
     /**
      * Sets the number in Morse code format.
-     * 
+     *
      * @param morse the Morse code string
      */
     public void setNumber(String morse) {
@@ -29,7 +29,7 @@ public class Morse {
 
     /**
      * Gets the number in Morse code format.
-     * 
+     *
      * @return the Morse code string representation
      */
     public String getNumber() {
@@ -38,7 +38,7 @@ public class Morse {
 
     /**
      * Gets the integer value of the number.
-     * 
+     *
      * @return the integer value
      */
     public int getNum() {

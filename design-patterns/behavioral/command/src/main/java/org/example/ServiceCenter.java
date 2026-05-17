@@ -5,7 +5,7 @@ import java.util.List;
 
 /**
  * Service center that manages and executes tasks using the Command pattern.
- * 
+ *
  * @version 1.0
  */
 public class ServiceCenter {
@@ -13,7 +13,7 @@ public class ServiceCenter {
 
     /**
      * Executes a task and adds it to the history.
-     * 
+     *
      * @param task the task to execute
      */
     public void executeTask(Task task) {
@@ -35,4 +35,3 @@ public class ServiceCenter {
         }
     }
 }
-

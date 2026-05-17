@@ -2,7 +2,7 @@ package org.example;
 
 /**
  * Dwarf race implementation.
- * 
+ *
  * @version 1.0
  */
 public class Dwarf implements Race {
@@ -11,4 +11,3 @@ public class Dwarf implements Race {
         return 1000.0f;
     }
 }
-

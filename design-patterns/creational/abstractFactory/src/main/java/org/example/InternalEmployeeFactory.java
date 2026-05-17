@@ -7,20 +7,20 @@ package org.example;
  * * @version 1.0
  */
 public class InternalEmployeeFactory implements AbstractFactory {
-    
+
     /**
      * Creates a payroll document for internal employees.
-     * 
+     *
      * @return a new InternalEmployeePayroll instance
      */
     @Override
     public Payroll createPayroll() {
         return new InternalEmployeePayroll();
     }
-    
+
     /**
      * Creates a report document for internal employees.
-     * 
+     *
      * @return a new InternalEmployeeReport instance
      */
     @Override
@@ -28,4 +28,3 @@ public class InternalEmployeeFactory implements AbstractFactory {
         return new InternalEmployeeReport();
     }
 }
-

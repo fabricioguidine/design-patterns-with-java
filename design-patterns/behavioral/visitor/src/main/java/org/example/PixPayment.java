@@ -2,7 +2,7 @@ package org.example;
 
 /**
  * Pix payment implementation.
- * 
+ *
  * @version 1.0
  */
 public class PixPayment implements Payment {
@@ -11,7 +11,7 @@ public class PixPayment implements Payment {
 
     /**
      * Constructs a PixPayment.
-     * 
+     *
      * @param pixKey the Pix key
      * @param value the payment value
      */
@@ -42,4 +42,3 @@ public class PixPayment implements Payment {
         return visitor.displayPixPayment(this);
     }
 }
-

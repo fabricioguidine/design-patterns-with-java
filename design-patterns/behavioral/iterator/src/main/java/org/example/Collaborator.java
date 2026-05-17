@@ -2,7 +2,7 @@ package org.example;
 
 /**
  * Represents a collaborator/employee in the organization.
- * 
+ *
  * @version 1.0
  */
 public class Collaborator {
@@ -11,7 +11,7 @@ public class Collaborator {
 
     /**
      * Constructs a Collaborator with the given name and active status.
-     * 
+     *
      * @param name the collaborator's name
      * @param active whether the collaborator is active
      */
@@ -36,4 +36,3 @@ public class Collaborator {
         this.active = active;
     }
 }
-

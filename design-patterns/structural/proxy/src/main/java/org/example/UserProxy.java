@@ -4,7 +4,7 @@ import java.util.List;
 
 /**
  * Proxy implementation for User that controls access and lazy loading.
- * 
+ *
  * @version 1.0
  */
 public class UserProxy implements IUser {
@@ -13,7 +13,7 @@ public class UserProxy implements IUser {
 
     /**
      * Constructs a UserProxy with the given CPF.
-     * 
+     *
      * @param cpf the user's CPF
      */
     public UserProxy(String cpf) {
@@ -45,4 +45,3 @@ public class UserProxy implements IUser {
         return this.user.getContacts(administrator);
     }
 }
-

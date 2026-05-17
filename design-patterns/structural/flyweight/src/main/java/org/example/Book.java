@@ -2,7 +2,7 @@ package org.example;
 
 /**
  * Represents a book in the Flyweight pattern.
- * 
+ *
  * @version 1.0
  */
 public class Book {
@@ -12,7 +12,7 @@ public class Book {
 
     /**
      * Constructs a Book with the given information.
-     * 
+     *
      * @param name the book name
      * @param price the book price
      * @param supplier the supplier (flyweight object)
@@ -34,17 +34,15 @@ public class Book {
 
     /**
      * Gets the book details including supplier information.
-     * 
+     *
      * @return formatted book details
      */
     public String getDetails() {
-        return "Book{" +
-                "name=" + this.name +
-                ", price=$" + this.price +
-                ", supplierName=" + supplier.getName() +
-                ", supplierCity=" + supplier.getCity() +
-                ", supplierState=" + supplier.getState() +
-                "}";
+        return "Book{" + "name="
+                + this.name + ", price=$"
+                + this.price + ", supplierName="
+                + supplier.getName() + ", supplierCity="
+                + supplier.getCity() + ", supplierState="
+                + supplier.getState() + "}";
     }
 }
-

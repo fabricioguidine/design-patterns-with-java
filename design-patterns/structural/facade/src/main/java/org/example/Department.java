@@ -5,7 +5,7 @@ import java.util.List;
 
 /**
  * Base department class for the Facade pattern.
- * 
+ *
  * @version 1.0
  */
 public class Department {
@@ -13,7 +13,7 @@ public class Department {
 
     /**
      * Adds an employee without training to this department.
-     * 
+     *
      * @param employee the employee to add
      * @throws NullPointerException if employee is null
      */
@@ -26,7 +26,7 @@ public class Department {
 
     /**
      * Verifies if an employee has a certificate (is in the list of employees without training).
-     * 
+     *
      * @param employee the employee to check
      * @return true if employee is in the list (meaning they don't have training/certificate)
      */
@@ -34,4 +34,3 @@ public class Department {
         return this.employeesWithoutTraining.contains(employee);
     }
 }
-

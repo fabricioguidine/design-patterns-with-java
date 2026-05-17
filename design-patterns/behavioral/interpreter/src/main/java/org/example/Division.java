@@ -2,7 +2,7 @@ package org.example;
 
 /**
  * Represents a division operation in the expression tree.
- * 
+ *
  * @version 1.0
  */
 public class Division implements ExpressionInterpreter {
@@ -11,7 +11,7 @@ public class Division implements ExpressionInterpreter {
 
     /**
      * Constructs a Division operation with left and right operands.
-     * 
+     *
      * @param leftElement the left operand
      * @param rightElement the right operand
      */
@@ -31,4 +31,3 @@ public class Division implements ExpressionInterpreter {
         return x / y;
     }
 }
-

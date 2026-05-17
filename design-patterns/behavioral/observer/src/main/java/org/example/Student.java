@@ -5,7 +5,7 @@ import java.util.Observer;
 
 /**
  * Represents a student that observes scholarship updates.
- * 
+ *
  * @version 1.0
  */
 public class Student implements Observer {
@@ -14,7 +14,7 @@ public class Student implements Observer {
 
     /**
      * Constructs a Student with the given name.
-     * 
+     *
      * @param name the student's name
      */
     public Student(String name) {
@@ -26,7 +26,7 @@ public class Student implements Observer {
 
     /**
      * Gets the last notification received.
-     * 
+     *
      * @return the last notification
      */
     public String getLastNotification() {
@@ -35,7 +35,7 @@ public class Student implements Observer {
 
     /**
      * Applies for a scholarship and registers as an observer.
-     * 
+     *
      * @param scholarship the scholarship to apply for
      */
     public void apply(Scholarship scholarship) {
@@ -50,4 +50,3 @@ public class Student implements Observer {
         this.lastNotification = this.name + ", application updated for: " + vacancy.toString();
     }
 }
-

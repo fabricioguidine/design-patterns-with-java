@@ -2,7 +2,7 @@ package org.example;
 
 /**
  * Abstract base class for rooms implementing the Template Method pattern.
- * 
+ *
  * @version 1.0
  */
 public abstract class Room {
@@ -27,34 +27,33 @@ public abstract class Room {
 
     /**
      * Gets the time/duration for this room type.
-     * 
+     *
      * @return the time value
      */
     public abstract Double getTime();
 
     /**
      * Gets the type of room.
-     * 
+     *
      * @return the room type
      */
     public abstract String getType();
 
     /**
      * Gets information about the room.
-     * 
+     *
      * @return formatted room information
      */
     public String getInfo() {
-        return "{\n" +
-                "   number: " + getNumber() + ",\n" +
-                "   time: " + getTime() + ",\n" +
-                "   type: " + getType() + "\n" +
-                "}";
+        return "{\n" + "   number: "
+                + getNumber() + ",\n" + "   time: "
+                + getTime() + ",\n" + "   type: "
+                + getType() + "\n" + "}";
     }
 
     /**
      * Simulates the stay duration for a given number of days.
-     * 
+     *
      * @param days the number of days
      * @return the calculated stay duration
      */
@@ -65,4 +64,3 @@ public abstract class Room {
         return days * getTime();
     }
 }
-

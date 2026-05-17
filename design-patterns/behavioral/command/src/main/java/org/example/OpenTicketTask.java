@@ -2,7 +2,7 @@ package org.example;
 
 /**
  * Command implementation for opening a ticket.
- * 
+ *
  * @version 1.0
  */
 public class OpenTicketTask implements Task {
@@ -10,7 +10,7 @@ public class OpenTicketTask implements Task {
 
     /**
      * Constructs an OpenTicketTask for the given ticket.
-     * 
+     *
      * @param ticket the ticket to open
      */
     public OpenTicketTask(Ticket ticket) {
@@ -27,4 +27,3 @@ public class OpenTicketTask implements Task {
         ticket.closeTicket();
     }
 }
-

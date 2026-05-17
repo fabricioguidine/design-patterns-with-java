@@ -1,12 +1,13 @@
+import static org.junit.jupiter.api.Assertions.assertEquals;
+
 import org.example.*;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
-import static org.junit.jupiter.api.Assertions.assertEquals;
 
 /**
  * Test suite for ConferenceRoom in the Template Method pattern.
- * 
+ *
  * @version 1.0
  */
 @DisplayName("Template Method Pattern - Conference Room Tests")
@@ -41,14 +42,8 @@ class ConferenceRoomTest {
     @DisplayName("Should return room information")
     void shouldReturnRoomInformation() {
         room.setNumber("1999");
-        String expectedResponse =
-                "{\n" +
-                        "   number: 1999,\n" +
-                        "   time: 2.0,\n" +
-                        "   type: Conference Room\n" +
-                        "}";
+        String expectedResponse = "{\n" + "   number: 1999,\n" + "   time: 2.0,\n" + "   type: Conference Room\n" + "}";
 
         assertEquals(expectedResponse, room.getInfo());
     }
 }
-

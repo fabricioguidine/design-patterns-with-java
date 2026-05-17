@@ -3,7 +3,7 @@ package org.example;
 /**
  * Abstract base class representing a person in the organization.
  * Implements the Component interface in the Composite pattern.
- * 
+ *
  * @version 1.0
  */
 public abstract class Person {
@@ -13,7 +13,7 @@ public abstract class Person {
 
     /**
      * Constructs a Person with the given information.
-     * 
+     *
      * @param name the person's name
      * @param registrationNumber the registration number
      * @param position the job position
@@ -50,9 +50,8 @@ public abstract class Person {
 
     /**
      * Gets information about this person.
-     * 
+     *
      * @return a string containing person information
      */
     public abstract String getInfo();
 }
-

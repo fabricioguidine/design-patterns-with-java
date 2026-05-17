@@ -4,7 +4,7 @@ import java.util.Observable;
 
 /**
  * Represents a scholarship that notifies observers when results are published.
- * 
+ *
  * @version 1.0
  */
 public class Scholarship extends Observable {
@@ -14,7 +14,7 @@ public class Scholarship extends Observable {
 
     /**
      * Constructs a Scholarship with the given details.
-     * 
+     *
      * @param course the course name
      * @param value the scholarship value
      * @param quantity the number of available scholarships
@@ -44,11 +44,6 @@ public class Scholarship extends Observable {
 
     @Override
     public String toString() {
-        return "Scholarship{" +
-                "course='" + course + '\'' +
-                ", value=" + value +
-                ", quantity=" + quantity +
-                '}';
+        return "Scholarship{" + "course='" + course + '\'' + ", value=" + value + ", quantity=" + quantity + '}';
     }
 }
-

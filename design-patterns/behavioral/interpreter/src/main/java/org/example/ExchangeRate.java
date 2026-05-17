@@ -2,7 +2,7 @@ package org.example;
 
 /**
  * Utility class for calculating exchange rates using the Interpreter pattern.
- * 
+ *
  * @version 1.0
  */
 public class ExchangeRate {
@@ -10,7 +10,7 @@ public class ExchangeRate {
 
     /**
      * Calculates the exchange value using the formula.
-     * 
+     *
      * @param real the amount in Brazilian Real
      * @param rate the exchange rate
      * @return the calculated value
@@ -23,4 +23,3 @@ public class ExchangeRate {
         return interpreter.interpret();
     }
 }
-

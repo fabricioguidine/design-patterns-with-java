@@ -2,7 +2,7 @@ package org.example;
 
 /**
  * Barbarian character class implementation.
- * 
+ *
  * @version 1.0
  */
 public class Barbarian extends CharacterClass {
@@ -16,4 +16,3 @@ public class Barbarian extends CharacterClass {
         return this.value + this.race.getPurchaseValue();
     }
 }
-

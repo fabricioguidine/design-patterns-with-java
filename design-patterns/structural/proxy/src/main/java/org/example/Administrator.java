@@ -2,7 +2,7 @@ package org.example;
 
 /**
  * Represents an administrator in the Proxy pattern.
- * 
+ *
  * @version 1.0
  */
 public class Administrator {
@@ -11,7 +11,7 @@ public class Administrator {
 
     /**
      * Constructs an Administrator with the given login and validation status.
-     * 
+     *
      * @param login the administrator login
      * @param valid whether the administrator is valid/authenticated
      */
@@ -42,4 +42,3 @@ public class Administrator {
         this.valid = valid;
     }
 }
-

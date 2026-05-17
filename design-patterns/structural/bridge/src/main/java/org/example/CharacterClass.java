@@ -3,7 +3,7 @@ package org.example;
 /**
  * Abstract character class that uses the Bridge pattern.
  * Separates the abstraction (CharacterClass) from the implementation (Race).
- * 
+ *
  * @version 1.0
  */
 public abstract class CharacterClass {
@@ -24,4 +24,3 @@ public abstract class CharacterClass {
 
     public abstract float calculateValue();
 }
-

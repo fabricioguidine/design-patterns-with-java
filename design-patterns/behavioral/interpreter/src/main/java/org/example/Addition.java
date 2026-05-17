@@ -2,7 +2,7 @@ package org.example;
 
 /**
  * Represents an addition operation in the expression tree.
- * 
+ *
  * @version 1.0
  */
 public class Addition implements ExpressionInterpreter {
@@ -11,7 +11,7 @@ public class Addition implements ExpressionInterpreter {
 
     /**
      * Constructs an Addition operation with left and right operands.
-     * 
+     *
      * @param leftElement the left operand
      * @param rightElement the right operand
      */
@@ -28,4 +28,3 @@ public class Addition implements ExpressionInterpreter {
         return x + y;
     }
 }
-

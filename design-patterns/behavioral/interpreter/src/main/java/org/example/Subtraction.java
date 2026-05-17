@@ -2,7 +2,7 @@ package org.example;
 
 /**
  * Represents a subtraction operation in the expression tree.
- * 
+ *
  * @version 1.0
  */
 public class Subtraction implements ExpressionInterpreter {
@@ -11,7 +11,7 @@ public class Subtraction implements ExpressionInterpreter {
 
     /**
      * Constructs a Subtraction operation with left and right operands.
-     * 
+     *
      * @param leftElement the left operand
      * @param rightElement the right operand
      */
@@ -28,4 +28,3 @@ public class Subtraction implements ExpressionInterpreter {
         return x - y;
     }
 }
-

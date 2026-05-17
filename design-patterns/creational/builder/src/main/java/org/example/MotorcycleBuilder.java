@@ -3,7 +3,7 @@ package org.example;
 /**
  * Builder class for constructing Motorcycle objects step by step.
  * Implements the Builder pattern to create complex objects with validation.
- * 
+ *
  * @version 1.0
  */
 public class MotorcycleBuilder {
@@ -18,7 +18,7 @@ public class MotorcycleBuilder {
 
     /**
      * Builds and validates the motorcycle.
-     * 
+     *
      * @return the constructed Motorcycle
      * @throws IllegalArgumentException if required fields are missing or invalid
      */
@@ -85,4 +85,3 @@ public class MotorcycleBuilder {
         return this;
     }
 }
-

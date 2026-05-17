@@ -2,7 +2,7 @@ package org.example;
 
 /**
  * Meeting room implementation of the Template Method pattern.
- * 
+ *
  * @version 1.0
  */
 public class MeetingRoom extends Room {
@@ -16,4 +16,3 @@ public class MeetingRoom extends Room {
         return "Meeting Room";
     }
 }
-

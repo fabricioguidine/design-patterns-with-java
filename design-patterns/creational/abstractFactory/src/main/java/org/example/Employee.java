@@ -7,14 +7,14 @@ package org.example;
  * * @version 1.0
  */
 public class Employee {
-    
+
     private final Payroll payroll;
     private final Report report;
-    
+
     /**
      * Constructs a new Employee using the provided factory to create
      * related objects (payroll and report).
-     * 
+     *
      * @param factory the abstract factory to use for creating objects
      * @throws IllegalArgumentException if factory is null
      */
@@ -25,19 +25,19 @@ public class Employee {
         this.payroll = factory.createPayroll();
         this.report = factory.createReport();
     }
-    
+
     /**
      * Generates and returns the payroll information.
-     * 
+     *
      * @return a string containing the payroll information
      */
     public String generatePayroll() {
         return this.payroll.generate();
     }
-    
+
     /**
      * Generates and returns the report information.
-     * 
+     *
      * @return a string containing the report information
      */
     public String generateReport() {

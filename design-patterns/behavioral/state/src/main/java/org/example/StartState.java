@@ -2,17 +2,17 @@ package org.example;
 
 /**
  * Represents the Start state of the game.
- * 
+ *
  * @version 1.0
  */
 public class StartState implements GameState {
     private StartState() {}
-    
+
     private static final StartState instance = new StartState();
-    
+
     /**
      * Gets the singleton instance.
-     * 
+     *
      * @return the instance
      */
     public static StartState getInstance() {
@@ -50,4 +50,3 @@ public class StartState implements GameState {
         return "GAME PAUSED NOT ACHIEVED";
     }
 }
-

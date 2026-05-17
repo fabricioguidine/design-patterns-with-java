@@ -2,7 +2,7 @@ package org.example;
 
 /**
  * Represents a company that uses the Composite pattern to organize employees.
- * 
+ *
  * @version 1.0
  */
 public class Company {
@@ -28,7 +28,7 @@ public class Company {
 
     /**
      * Gets information about all employees in the company hierarchy.
-     * 
+     *
      * @return a string containing all employee information
      * @throws NullPointerException if no employees are registered
      */
@@ -41,11 +41,10 @@ public class Company {
 
     /**
      * Sets the root employee (typically a CEO or top manager).
-     * 
+     *
      * @param employees the root person in the hierarchy
      */
     public void setEmployees(Person employees) {
         this.employees = employees;
     }
 }
-

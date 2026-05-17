@@ -2,7 +2,7 @@ package org.example;
 
 /**
  * Represents a support ticket with protocol, subject, and client information.
- * 
+ *
  * @version 1.0
  */
 public class Ticket {
@@ -13,7 +13,7 @@ public class Ticket {
 
     /**
      * Constructs a new Ticket.
-     * 
+     *
      * @param protocol the ticket protocol number
      * @param subject the ticket subject
      * @param clientName the client name
@@ -26,7 +26,7 @@ public class Ticket {
 
     /**
      * Gets the ticket status.
-     * 
+     *
      * @return the current status
      */
     public String getStatus() {

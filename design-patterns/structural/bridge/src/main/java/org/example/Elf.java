@@ -2,7 +2,7 @@ package org.example;
 
 /**
  * Elf race implementation.
- * 
+ *
  * @version 1.0
  */
 public class Elf implements Race {
@@ -11,4 +11,3 @@ public class Elf implements Race {
         return 2000.0f;
     }
 }
-

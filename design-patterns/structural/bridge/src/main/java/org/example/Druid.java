@@ -2,7 +2,7 @@ package org.example;
 
 /**
  * Druid character class implementation.
- * 
+ *
  * @version 1.0
  */
 public class Druid extends CharacterClass {
@@ -16,4 +16,3 @@ public class Druid extends CharacterClass {
         return this.value + this.race.getPurchaseValue();
     }
 }
-

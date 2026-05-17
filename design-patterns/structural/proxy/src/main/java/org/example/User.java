@@ -5,7 +5,7 @@ import java.util.List;
 
 /**
  * Real user implementation in the Proxy pattern.
- * 
+ *
  * @version 1.0
  */
 public class User implements IUser {
@@ -17,7 +17,7 @@ public class User implements IUser {
 
     /**
      * Constructs a User by loading from database using CPF.
-     * 
+     *
      * @param cpf the user's CPF
      */
     public User(String cpf) {
@@ -38,7 +38,7 @@ public class User implements IUser {
 
     /**
      * Constructs a User with all information.
-     * 
+     *
      * @param name the user's name
      * @param city the user's city
      * @param phone the user's phone
@@ -85,4 +85,3 @@ public class User implements IUser {
         return Arrays.asList(this.phone, this.email);
     }
 }
-

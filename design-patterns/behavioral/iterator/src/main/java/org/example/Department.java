@@ -7,7 +7,7 @@ import java.util.List;
 
 /**
  * Represents a department that implements Iterable for the Iterator pattern.
- * 
+ *
  * @version 1.0
  */
 public class Department implements Iterable<Collaborator> {
@@ -15,7 +15,7 @@ public class Department implements Iterable<Collaborator> {
 
     /**
      * Constructs a Department with the given collaborators.
-     * 
+     *
      * @param collaborators the collaborators to add
      */
     public Department(Collaborator... collaborators) {
@@ -27,4 +27,3 @@ public class Department implements Iterable<Collaborator> {
         return collaborators.iterator();
     }
 }
-

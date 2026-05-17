@@ -5,7 +5,7 @@ import java.util.List;
 
 /**
  * SMS mediator implementation for the Mediator pattern.
- * 
+ *
  * @version 1.0
  */
 public class SMS implements Mediator {
