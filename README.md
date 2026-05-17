@@ -1,8 +1,10 @@
 # 🎨 Design Patterns Collection
 
-[![Java](https://img.shields.io/badge/Java-11+-blue.svg)](https://www.oracle.com/java/)
+[![CI](https://github.com/fabricioguidine/design-patterns-with-java/actions/workflows/ci.yml/badge.svg)](https://github.com/fabricioguidine/design-patterns-with-java/actions/workflows/ci.yml)
+[![codecov](https://codecov.io/gh/fabricioguidine/design-patterns-with-java/branch/main/graph/badge.svg)](https://codecov.io/gh/fabricioguidine/design-patterns-with-java)
+[![Java](https://img.shields.io/badge/Java-17%20%7C%2021-blue.svg)](https://www.oracle.com/java/)
 [![Maven](https://img.shields.io/badge/Maven-3.6+-green.svg)](https://maven.apache.org/)
-[![License](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 
 A comprehensive, production-ready implementation of all 23 classic GoF (Gang of Four) design patterns in Java. Each pattern includes complete test coverage, comprehensive documentation, and real-world examples.
 
