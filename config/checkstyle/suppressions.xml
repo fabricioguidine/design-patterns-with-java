@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<!DOCTYPE suppressions PUBLIC
+        "-//Checkstyle//DTD SuppressionFilter Configuration 1.2//EN"
+        "https://checkstyle.org/dtds/suppressions_1_2.dtd">
+
+<suppressions>
+    <!-- Allow longer lines and looser style in test sources. -->
+    <suppress checks="LineLength" files=".*[\\/]src[\\/]test[\\/].*"/>
+    <suppress checks="UnusedImports" files=".*[\\/]src[\\/]test[\\/].*"/>
+</suppressions>
