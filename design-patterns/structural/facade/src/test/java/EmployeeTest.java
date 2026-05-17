@@ -1,14 +1,15 @@
-import org.example.Training;
+import static org.junit.jupiter.api.Assertions.*;
+
 import org.example.Certificate;
-import org.example.Manager;
 import org.example.Employee;
+import org.example.Manager;
+import org.example.Training;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
-import static org.junit.jupiter.api.Assertions.*;
 
 /**
  * Test suite for the Facade pattern implementation.
- * 
+ *
  * @version 1.0
  */
 @DisplayName("Facade Pattern Tests")
@@ -18,7 +19,7 @@ class EmployeeTest {
     void shouldReturnClearedEmployee() {
         // Arrange
         Employee employee = new Employee();
-        
+
         // Act & Assert
         assertEquals(true, employee.isCleared());
     }
@@ -29,7 +30,7 @@ class EmployeeTest {
         // Arrange
         Employee employee = new Employee();
         Training.getInstance().addEmployeeWithoutTraining(employee);
-        
+
         // Act & Assert
         assertEquals(false, employee.isCleared());
     }
@@ -40,7 +41,7 @@ class EmployeeTest {
         // Arrange
         Employee employee = new Employee();
         Manager.getInstance().addEmployeeWithoutTraining(employee);
-        
+
         // Act & Assert
         assertEquals(false, employee.isCleared());
     }
@@ -51,7 +52,7 @@ class EmployeeTest {
         // Arrange
         Employee employee = new Employee();
         Certificate.getInstance().addEmployeeWithoutTraining(employee);
-        
+
         // Act & Assert
         assertEquals(false, employee.isCleared());
     }
@@ -61,10 +62,7 @@ class EmployeeTest {
     void shouldThrowCorrectException() {
         // Arrange & Act & Assert
         NullPointerException exception = assertThrows(
-            NullPointerException.class,
-            () -> Training.getInstance().addEmployeeWithoutTraining(null)
-        );
+                NullPointerException.class, () -> Training.getInstance().addEmployeeWithoutTraining(null));
         assertEquals("Employee cannot be null.", exception.getMessage());
     }
 }
-

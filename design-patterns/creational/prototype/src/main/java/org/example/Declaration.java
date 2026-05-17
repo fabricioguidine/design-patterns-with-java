@@ -2,7 +2,7 @@ package org.example;
 
 /**
  * Represents a declaration that can be cloned using the Prototype pattern.
- * 
+ *
  * @version 1.0
  */
 public class Declaration implements Cloneable {
@@ -11,7 +11,7 @@ public class Declaration implements Cloneable {
 
     /**
      * Constructs a Declaration with the given city and registration number.
-     * 
+     *
      * @param city the city
      * @param registrationNumber the registration number
      */
@@ -55,10 +55,6 @@ public class Declaration implements Cloneable {
 
     @Override
     public String toString() {
-        return "Declaration{" +
-                "city='" + city + '\'' +
-                ", registrationNumber=" + registrationNumber +
-                '}';
+        return "Declaration{" + "city='" + city + '\'' + ", registrationNumber=" + registrationNumber + '}';
     }
 }
-

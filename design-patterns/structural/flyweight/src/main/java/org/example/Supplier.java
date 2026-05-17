@@ -2,7 +2,7 @@ package org.example;
 
 /**
  * Represents a supplier in the Flyweight pattern.
- * 
+ *
  * @version 1.0
  */
 public class Supplier {
@@ -12,7 +12,7 @@ public class Supplier {
 
     /**
      * Constructs a Supplier with the given information.
-     * 
+     *
      * @param name the supplier name
      * @param city the supplier city
      * @param state the supplier state
@@ -44,4 +44,3 @@ public class Supplier {
         return state;
     }
 }
-

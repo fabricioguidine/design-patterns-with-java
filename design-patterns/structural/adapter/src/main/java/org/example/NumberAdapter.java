@@ -4,7 +4,7 @@ package org.example;
  * Adapter class that converts between integer numbers and Morse code representation.
  * This class implements the Adapter pattern by allowing incompatible interfaces
  * (IntegerNumber and INumber/MorseNumber) to work together.
- * 
+ *
  * @version 1.0
  */
 public class NumberAdapter extends IntegerNumber {
@@ -12,7 +12,7 @@ public class NumberAdapter extends IntegerNumber {
 
     /**
      * Constructs a NumberAdapter with the given Morse number.
-     * 
+     *
      * @param morseNumber the Morse number to adapt
      */
     public NumberAdapter(INumber morseNumber) {
@@ -21,7 +21,7 @@ public class NumberAdapter extends IntegerNumber {
 
     /**
      * Retrieves the number in Morse code format.
-     * 
+     *
      * @return the number as Morse code string
      */
     public String retrieveNumber() {
@@ -80,4 +80,3 @@ public class NumberAdapter extends IntegerNumber {
         }
     }
 }
-

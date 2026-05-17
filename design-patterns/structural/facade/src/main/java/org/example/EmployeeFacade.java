@@ -2,13 +2,13 @@ package org.example;
 
 /**
  * Facade class that simplifies checking employee pending issues across multiple departments.
- * 
+ *
  * @version 1.0
  */
 public class EmployeeFacade {
     /**
      * Checks if an employee has any pending issues across all departments.
-     * 
+     *
      * @param employee the employee to check
      * @return true if employee has no pending issues, false otherwise
      */
@@ -16,7 +16,7 @@ public class EmployeeFacade {
         if (employee == null) {
             throw new IllegalArgumentException("Employee cannot be null");
         }
-        
+
         if (Certificate.getInstance().verifyCertificate(employee)) {
             return false;
         }
@@ -30,4 +30,3 @@ public class EmployeeFacade {
         return true;
     }
 }
-

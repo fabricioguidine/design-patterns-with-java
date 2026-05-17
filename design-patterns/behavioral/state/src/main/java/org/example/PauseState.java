@@ -2,17 +2,17 @@ package org.example;
 
 /**
  * Represents the Pause state of the game.
- * 
+ *
  * @version 1.0
  */
 public class PauseState implements GameState {
     private PauseState() {}
-    
+
     private static final PauseState instance = new PauseState();
-    
+
     /**
      * Gets the singleton instance.
-     * 
+     *
      * @return the instance
      */
     public static PauseState getInstance() {
@@ -51,4 +51,3 @@ public class PauseState implements GameState {
         return "GAME PAUSED NOT ACHIEVED";
     }
 }
-

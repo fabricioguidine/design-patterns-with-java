@@ -2,7 +2,7 @@ package org.example;
 
 /**
  * Converts Brazilian Real to US Dollar using exchange rate calculation.
- * 
+ *
  * @version 1.0
  */
 public class RealToDollarConversion {
@@ -11,7 +11,7 @@ public class RealToDollarConversion {
 
     /**
      * Gets the value in Brazilian Real.
-     * 
+     *
      * @return the value
      */
     public double getValue() {
@@ -20,7 +20,7 @@ public class RealToDollarConversion {
 
     /**
      * Sets the value in Brazilian Real.
-     * 
+     *
      * @param value the value to set
      */
     public void setValue(double value) {
@@ -29,7 +29,7 @@ public class RealToDollarConversion {
 
     /**
      * Gets the exchange rate.
-     * 
+     *
      * @return the rate
      */
     public double getRate() {
@@ -38,7 +38,7 @@ public class RealToDollarConversion {
 
     /**
      * Sets the exchange rate.
-     * 
+     *
      * @param rate the rate to set
      */
     public void setRate(double rate) {
@@ -47,11 +47,10 @@ public class RealToDollarConversion {
 
     /**
      * Calculates the converted value.
-     * 
+     *
      * @return the calculated conversion value
      */
     public double calculateValue() {
         return ExchangeRate.calculateValue(this.value, this.rate / this.value);
     }
 }
-

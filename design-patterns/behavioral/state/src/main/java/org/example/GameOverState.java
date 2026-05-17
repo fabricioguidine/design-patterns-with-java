@@ -2,17 +2,17 @@ package org.example;
 
 /**
  * Represents the Game Over state.
- * 
+ *
  * @version 1.0
  */
 public class GameOverState implements GameState {
     private GameOverState() {}
-    
+
     private static final GameOverState instance = new GameOverState();
-    
+
     /**
      * Gets the singleton instance.
-     * 
+     *
      * @return the instance
      */
     public static GameOverState getInstance() {
@@ -49,4 +49,3 @@ public class GameOverState implements GameState {
         return "GAME PAUSED NOT ACHIEVED";
     }
 }
-

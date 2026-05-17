@@ -2,7 +2,7 @@ package org.example;
 
 /**
  * Represents a multiplication operation in the expression tree.
- * 
+ *
  * @version 1.0
  */
 public class Multiplication implements ExpressionInterpreter {
@@ -11,7 +11,7 @@ public class Multiplication implements ExpressionInterpreter {
 
     /**
      * Constructs a Multiplication operation with left and right operands.
-     * 
+     *
      * @param leftElement the left operand
      * @param rightElement the right operand
      */
@@ -28,4 +28,3 @@ public class Multiplication implements ExpressionInterpreter {
         return x * y;
     }
 }
-

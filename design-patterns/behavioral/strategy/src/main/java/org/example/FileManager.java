@@ -7,10 +7,10 @@ package org.example;
  * * @version 1.0
  */
 public class FileManager {
-    
+
     /**
      * Saves a file using the provided strategy.
-     * 
+     *
      * @param fileFormat the strategy to use for saving the file
      * @param fileName the name of the file to save
      * @return a confirmation message from the strategy

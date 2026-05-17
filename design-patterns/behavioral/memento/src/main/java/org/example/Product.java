@@ -5,7 +5,7 @@ import java.util.List;
 
 /**
  * Represents a product that can save and restore its state using the Memento pattern.
- * 
+ *
  * @version 1.0
  */
 public class Product {
@@ -14,7 +14,7 @@ public class Product {
 
     /**
      * Gets the current state.
-     * 
+     *
      * @return the current state
      */
     public ProductState getState() {
@@ -23,7 +23,7 @@ public class Product {
 
     /**
      * Sets the product state and saves it to memento.
-     * 
+     *
      * @param state the state to set
      */
     public void setState(ProductState state) {
@@ -36,7 +36,7 @@ public class Product {
 
     /**
      * Restores the state from memento at the given index.
-     * 
+     *
      * @param index the index to restore
      * @throws IllegalArgumentException if index is invalid
      */
@@ -49,11 +49,10 @@ public class Product {
 
     /**
      * Gets all saved states.
-     * 
+     *
      * @return the list of saved states
      */
     public List<ProductState> getStates() {
         return new ArrayList<>(this.memento);
     }
 }
-

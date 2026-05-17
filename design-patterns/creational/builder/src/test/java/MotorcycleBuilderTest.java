@@ -1,29 +1,26 @@
-import org.example.MotorcycleBuilder;
+import static org.junit.jupiter.api.Assertions.*;
+
 import org.example.Motorcycle;
+import org.example.MotorcycleBuilder;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
-import static org.junit.jupiter.api.Assertions.*;
 
 /**
  * Test suite for the Builder pattern implementation.
- * 
+ *
  * @version 1.0
  */
 @DisplayName("Builder Pattern Tests")
 class MotorcycleBuilderTest {
-    
+
     @Test
     @DisplayName("Should throw exception when brand is missing")
     void shouldThrowExceptionWhenBrandIsMissing() {
         // Arrange & Act & Assert
         MotorcycleBuilder motorcycleBuilder = new MotorcycleBuilder();
         IllegalArgumentException exception = assertThrows(
-            IllegalArgumentException.class,
-            () -> motorcycleBuilder
-                .setModel("fan")
-                .setYear(2011)
-                .build()
-        );
+                IllegalArgumentException.class,
+                () -> motorcycleBuilder.setModel("fan").setYear(2011).build());
         assertEquals("Invalid brand.", exception.getMessage());
     }
 
@@ -33,12 +30,8 @@ class MotorcycleBuilderTest {
         // Arrange & Act & Assert
         MotorcycleBuilder motorcycleBuilder = new MotorcycleBuilder();
         IllegalArgumentException exception = assertThrows(
-            IllegalArgumentException.class,
-            () -> motorcycleBuilder
-                .setBrand("honda")
-                .setYear(2011)
-                .build()
-        );
+                IllegalArgumentException.class,
+                () -> motorcycleBuilder.setBrand("honda").setYear(2011).build());
         assertEquals("Invalid model.", exception.getMessage());
     }
 
@@ -48,12 +41,8 @@ class MotorcycleBuilderTest {
         // Arrange & Act & Assert
         MotorcycleBuilder motorcycleBuilder = new MotorcycleBuilder();
         IllegalArgumentException exception = assertThrows(
-            IllegalArgumentException.class,
-            () -> motorcycleBuilder
-                .setBrand("honda")
-                .setModel("fan")
-                .build()
-        );
+                IllegalArgumentException.class,
+                () -> motorcycleBuilder.setBrand("honda").setModel("fan").build());
         assertEquals("Invalid year.", exception.getMessage());
     }
 
@@ -62,38 +51,38 @@ class MotorcycleBuilderTest {
     void shouldBuildValidMotorcycle() {
         // Arrange
         MotorcycleBuilder motorcycleBuilder = new MotorcycleBuilder();
-        
+
         // Act
         Motorcycle motorcycle = motorcycleBuilder
-            .setBrand("honda")
-            .setModel("fan")
-            .setYear(2011)
-            .build();
-        
+                .setBrand("honda")
+                .setModel("fan")
+                .setYear(2011)
+                .build();
+
         // Assert
         assertNotNull(motorcycle);
         assertEquals("honda", motorcycle.getBrand());
         assertEquals("fan", motorcycle.getModel());
         assertEquals(2011, motorcycle.getYear());
     }
-    
+
     @Test
     @DisplayName("Should build motorcycle with all optional fields")
     void shouldBuildMotorcycleWithAllOptionalFields() {
         // Arrange
         MotorcycleBuilder motorcycleBuilder = new MotorcycleBuilder();
-        
+
         // Act
         Motorcycle motorcycle = motorcycleBuilder
-            .setBrand("honda")
-            .setModel("fan")
-            .setYear(2011)
-            .setColor("red")
-            .setDisplacement("125cc")
-            .setPower("10hp")
-            .setPrice(5000.0f)
-            .build();
-        
+                .setBrand("honda")
+                .setModel("fan")
+                .setYear(2011)
+                .setColor("red")
+                .setDisplacement("125cc")
+                .setPower("10hp")
+                .setPrice(5000.0f)
+                .build();
+
         // Assert
         assertNotNull(motorcycle);
         assertEquals("red", motorcycle.getColor());
@@ -102,4 +91,3 @@ class MotorcycleBuilderTest {
         assertEquals(5000.0f, motorcycle.getPrice());
     }
 }
-

@@ -2,17 +2,17 @@ package org.example;
 
 /**
  * Represents the Victory state of the game.
- * 
+ *
  * @version 1.0
  */
 public class VictoryState implements GameState {
     private VictoryState() {}
-    
+
     private static final VictoryState instance = new VictoryState();
-    
+
     /**
      * Gets the singleton instance.
-     * 
+     *
      * @return the instance
      */
     public static VictoryState getInstance() {
@@ -49,4 +49,3 @@ public class VictoryState implements GameState {
         return "GAME PAUSED NOT ACHIEVED";
     }
 }
-

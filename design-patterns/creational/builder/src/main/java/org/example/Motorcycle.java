@@ -2,7 +2,7 @@ package org.example;
 
 /**
  * Represents a motorcycle with various attributes.
- * 
+ *
  * @version 1.0
  */
 public class Motorcycle {
@@ -106,4 +106,3 @@ public class Motorcycle {
         this.price = price;
     }
 }
-

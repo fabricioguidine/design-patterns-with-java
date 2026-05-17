@@ -2,7 +2,7 @@ package org.example;
 
 /**
  * Represents a game that can change states using the State pattern.
- * 
+ *
  * @version 1.0
  */
 public class Game {
@@ -18,7 +18,7 @@ public class Game {
 
     /**
      * Sets the game state.
-     * 
+     *
      * @param state the state to set
      */
     public void setState(GameState state) {
@@ -30,7 +30,7 @@ public class Game {
 
     /**
      * Starts the game.
-     * 
+     *
      * @return the result message
      */
     public String start() {
@@ -39,7 +39,7 @@ public class Game {
 
     /**
      * Plays the game.
-     * 
+     *
      * @return the result message
      */
     public String play() {
@@ -48,7 +48,7 @@ public class Game {
 
     /**
      * Loses the game.
-     * 
+     *
      * @return the result message
      */
     public String lose() {
@@ -57,7 +57,7 @@ public class Game {
 
     /**
      * Wins the game.
-     * 
+     *
      * @return the result message
      */
     public String win() {
@@ -66,7 +66,7 @@ public class Game {
 
     /**
      * Pauses the game.
-     * 
+     *
      * @return the result message
      */
     public String pause() {
@@ -75,7 +75,7 @@ public class Game {
 
     /**
      * Gets the current state name.
-     * 
+     *
      * @return the state name
      */
     public String getStateName() {
@@ -94,4 +94,3 @@ public class Game {
         return state;
     }
 }
-

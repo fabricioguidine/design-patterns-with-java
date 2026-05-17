@@ -2,14 +2,14 @@ package org.example;
 
 /**
  * Technical support department that handles ticket procedures.
- * 
+ *
  * @version 1.0
  */
 public class TechnicalSupportDepartment extends CustomerServiceDepartment {
 
     /**
      * Constructs a TechnicalSupportDepartment with a superior department.
-     * 
+     *
      * @param superior the superior department
      */
     public TechnicalSupportDepartment(CustomerServiceDepartment superior) {
@@ -22,4 +22,3 @@ public class TechnicalSupportDepartment extends CustomerServiceDepartment {
         return "Technical Support";
     }
 }
-

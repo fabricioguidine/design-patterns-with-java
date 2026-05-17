@@ -5,7 +5,7 @@ import java.util.Map;
 
 /**
  * Factory for creating and reusing Supplier instances in the Flyweight pattern.
- * 
+ *
  * @version 1.0
  */
 public class SupplierFactory {
@@ -13,7 +13,7 @@ public class SupplierFactory {
 
     /**
      * Gets a supplier by name, creating it if it doesn't exist.
-     * 
+     *
      * @param name the supplier name
      * @param city the supplier city
      * @param state the supplier state
@@ -30,11 +30,10 @@ public class SupplierFactory {
 
     /**
      * Gets the total number of unique suppliers.
-     * 
+     *
      * @return the number of suppliers
      */
     public static Integer getSupplierCount() {
         return suppliers.size();
     }
 }
-

@@ -2,7 +2,7 @@ package org.example;
 
 /**
  * Credit card payment implementation.
- * 
+ *
  * @version 1.0
  */
 public class CreditCardPayment implements Payment {
@@ -13,7 +13,7 @@ public class CreditCardPayment implements Payment {
 
     /**
      * Constructs a CreditCardPayment.
-     * 
+     *
      * @param cardNumber the card number
      * @param expiryDate the expiry date
      * @param securityCode the security code
@@ -56,4 +56,3 @@ public class CreditCardPayment implements Payment {
         return visitor.displayCreditCardPayment(this);
     }
 }
-

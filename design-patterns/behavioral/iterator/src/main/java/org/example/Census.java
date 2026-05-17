@@ -4,14 +4,14 @@ import java.util.Iterator;
 
 /**
  * Utility class for counting collaborators in departments using the Iterator pattern.
- * 
+ *
  * @version 1.0
  */
 public class Census {
 
     /**
      * Counts the number of active collaborators in a department.
-     * 
+     *
      * @param department the department to count
      * @return the number of active collaborators
      */
@@ -30,7 +30,7 @@ public class Census {
 
     /**
      * Counts the total number of collaborators in a department.
-     * 
+     *
      * @param department the department to count
      * @return the total number of collaborators
      */
@@ -46,4 +46,3 @@ public class Census {
         return count;
     }
 }
-

@@ -6,10 +6,10 @@ package org.example;
  * * @version 1.0
  */
 public class OutsourcedEmployeeReport implements Report {
-    
+
     /**
      * Generates and returns the report information for outsourced employees.
-     * 
+     *
      * @return a string containing the report information for outsourced employees
      */
     @Override
@@ -17,4 +17,3 @@ public class OutsourcedEmployeeReport implements Report {
         return "Report for Employee: Outsourced.";
     }
 }
-

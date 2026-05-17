@@ -2,7 +2,7 @@ package org.example;
 
 /**
  * Abstract decorator class for motorcycles in the Decorator pattern.
- * 
+ *
  * @version 1.0
  */
 public abstract class MotorcycleDecorator implements Motorcycle {
@@ -10,7 +10,7 @@ public abstract class MotorcycleDecorator implements Motorcycle {
 
     /**
      * Constructs a MotorcycleDecorator with the given motorcycle.
-     * 
+     *
      * @param motorcycle the motorcycle to decorate
      */
     public MotorcycleDecorator(Motorcycle motorcycle) {
@@ -32,16 +32,15 @@ public abstract class MotorcycleDecorator implements Motorcycle {
 
     /**
      * Gets the price of the decoration part.
-     * 
+     *
      * @return the part price
      */
     public abstract float getPartPrice();
 
     /**
      * Gets the customization description of the decoration part.
-     * 
+     *
      * @return the part customization string
      */
     public abstract String getPartCustom();
 }
-

@@ -5,7 +5,7 @@ import java.util.List;
 
 /**
  * Represents a composite node in the Composite pattern - a manager with subordinates.
- * 
+ *
  * @version 1.0
  */
 public class Manager extends Person {
@@ -13,7 +13,7 @@ public class Manager extends Person {
 
     /**
      * Constructs a Manager with the given information.
-     * 
+     *
      * @param name the manager's name
      * @param registrationNumber the registration number
      * @param position the job position
@@ -25,7 +25,7 @@ public class Manager extends Person {
 
     /**
      * Adds a subordinate to this manager.
-     * 
+     *
      * @param person the person to add as subordinate
      */
     public void addSubordinate(Person person) {
@@ -38,16 +38,18 @@ public class Manager extends Person {
     @Override
     public String getInfo() {
         StringBuilder output = new StringBuilder();
-        output.append("Manager: ").append(this.getName())
-              .append(" / ").append(this.getPosition())
-              .append(" / ").append(this.getRegistrationNumber())
-              .append("\n");
-        
+        output.append("Manager: ")
+                .append(this.getName())
+                .append(" / ")
+                .append(this.getPosition())
+                .append(" / ")
+                .append(this.getRegistrationNumber())
+                .append("\n");
+
         for (Person person : subordinates) {
             output.append(person.getInfo());
         }
-        
+
         return output.toString();
     }
 }
-

@@ -2,7 +2,7 @@ package org.example;
 
 /**
  * Manager department singleton in the Facade pattern.
- * 
+ *
  * @version 1.0
  */
 public class Manager extends Department {
@@ -12,11 +12,10 @@ public class Manager extends Department {
 
     /**
      * Gets the singleton instance.
-     * 
+     *
      * @return the Manager instance
      */
     public static Manager getInstance() {
         return manager;
     }
 }
-

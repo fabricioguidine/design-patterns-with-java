@@ -2,7 +2,7 @@ package org.example;
 
 /**
  * Represents an employee that can be cloned using the Prototype pattern.
- * 
+ *
  * @version 1.0
  */
 public class Employee implements Cloneable {
@@ -12,7 +12,7 @@ public class Employee implements Cloneable {
 
     /**
      * Constructs an Employee with the given information.
-     * 
+     *
      * @param registrationNumber the registration number
      * @param name the employee name
      * @param declaration the declaration
@@ -68,11 +68,9 @@ public class Employee implements Cloneable {
 
     @Override
     public String toString() {
-        return "Employee{" +
-                "registrationNumber=" + registrationNumber +
-                ", name='" + name + '\'' +
-                ", declaration=" + declaration +
-                '}';
+        return "Employee{" + "registrationNumber="
+                + registrationNumber + ", name='"
+                + name + '\'' + ", declaration="
+                + declaration + '}';
     }
 }
-

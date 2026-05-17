@@ -2,7 +2,7 @@ package org.example;
 
 /**
  * Cleric character class implementation.
- * 
+ *
  * @version 1.0
  */
 public class Cleric extends CharacterClass {
@@ -16,4 +16,3 @@ public class Cleric extends CharacterClass {
         return this.value + this.race.getPurchaseValue();
     }
 }
-
