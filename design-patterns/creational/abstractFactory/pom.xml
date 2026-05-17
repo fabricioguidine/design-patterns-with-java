@@ -15,12 +15,6 @@
     <name>Abstract Factory Pattern</name>
     <description>Abstract Factory pattern implementation - Provides an interface for creating families of related objects</description>
     
-    <properties>
-        <maven.compiler.source>11</maven.compiler.source>
-        <maven.compiler.target>11</maven.compiler.target>
-        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-    </properties>
-    
     <dependencies>
         <dependency>
             <groupId>org.junit.jupiter</groupId>
