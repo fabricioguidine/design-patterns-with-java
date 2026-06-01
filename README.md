@@ -1,372 +1,186 @@
-# 🎨 Design Patterns Collection
+<div align="center">
+
+<img src=".github/assets/banner.svg" alt="design-patterns-with-java" width="100%" />
 
 [![CI](https://github.com/fabricioguidine/design-patterns-with-java/actions/workflows/ci.yml/badge.svg)](https://github.com/fabricioguidine/design-patterns-with-java/actions/workflows/ci.yml)
-[![codecov](https://codecov.io/gh/fabricioguidine/design-patterns-with-java/branch/main/graph/badge.svg)](https://codecov.io/gh/fabricioguidine/design-patterns-with-java)
-[![Java](https://img.shields.io/badge/Java-17%20%7C%2021-blue.svg)](https://www.oracle.com/java/)
-[![Maven](https://img.shields.io/badge/Maven-3.6+-green.svg)](https://maven.apache.org/)
+
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 
-A comprehensive, production-ready implementation of all 23 classic GoF (Gang of Four) design patterns in Java. Each pattern includes complete test coverage, comprehensive documentation, and real-world examples.
+[![Java](https://img.shields.io/badge/Java-17+-orange.svg?logo=openjdk&logoColor=white)](https://openjdk.org)
 
-## 📑 Table of Contents
+[![Maven](https://img.shields.io/badge/build-Maven-C71A36.svg?logo=apachemaven&logoColor=white)](https://maven.apache.org)
 
-- [Overview](#overview)
-- [Features](#features)
-- [Design Patterns](#design-patterns)
-- [Getting Started](#getting-started)
-  - [Prerequisites](#prerequisites)
-  - [Installation](#installation)
-- [Building and Testing](#building-and-testing)
-- [Project Structure](#project-structure)
-- [Usage Examples](#usage-examples)
-- [Pattern Categories](#pattern-categories)
-- [Contributing](#contributing)
+</div>
+
+> Hands-on implementations of the 23 Gang of Four design patterns in Java, for study.
+
+A multi-module Maven project where every classic GoF design pattern lives in its own module under one of the three canonical categories: Creational, Structural, and Behavioral. Each module ships a small, self-contained example and JUnit 5 tests.
+
+## Table of Contents
+
+- [Patterns implemented](#patterns-implemented)
+  - [Creational](#creational)
+  - [Structural](#structural)
+  - [Behavioral](#behavioral)
+- [Architecture](#architecture)
+- [Requirements](#requirements)
+- [Build and run](#build-and-run)
+- [Project structure](#project-structure)
 - [License](#license)
-- [Author](#author)
 
-## 📖 Overview
+## Patterns implemented
 
-This repository provides well-structured, production-ready implementations of all 23 classic design patterns from the Gang of Four (GoF) book. The codebase has been fully refactored to English, follows Java best practices, and includes comprehensive documentation and testing.
+All 23 GoF patterns are present, grouped by category. Each module uses the base package `org.example`.
 
-**Key Highlights:**
-- ✅ All 23 GoF design patterns implemented
-- ✅ Complete unit test coverage with JUnit 5
-- ✅ Comprehensive JavaDoc documentation
-- ✅ Real-world, practical examples
-- ✅ Maven-based project structure
-- ✅ Fully refactored to English
-- ✅ Input validation and error handling
-- ✅ Production-ready code quality
+### Creational
 
-## ✨ Features
+| Pattern | Module | Intent |
+|---|---|---|
+| Abstract Factory | `creational/abstractFactory` | Create families of related objects without naming concrete classes |
+| Builder | `creational/builder` | Construct a complex object step by step |
+| Factory Method | `creational/factoryMethod` | Defer instantiation to a factory that returns a common interface |
+| Prototype | `creational/prototype` | Create new objects by cloning an existing instance |
+| Singleton | `creational/singleton` | Ensure a class has a single, globally accessible instance |
 
-- **🧹 Clean Code**: Well-structured, readable implementations following Java best practices
-- **🧪 Comprehensive Testing**: Complete unit test coverage using JUnit 5 with edge case handling
-- **📚 Documentation**: JavaDoc comments for all classes and methods
-- **🌍 Real Examples**: Practical, real-world use cases for each pattern
-- **🔧 Maven Ready**: Each pattern is a standalone Maven project with dependency management
-- **🌐 English Codebase**: All class names, method names, and strings translated to English
-- **🛡️ Input Validation**: Proper validation and error handling throughout
+### Structural
 
-## 🎯 Design Patterns
+| Pattern | Module | Intent |
+|---|---|---|
+| Adapter | `structural/adapter` | Make an incompatible interface usable through a wrapper |
+| Bridge | `structural/bridge` | Decouple an abstraction from its implementation |
+| Composite | `structural/composite` | Treat individual objects and compositions uniformly |
+| Decorator | `structural/decorator` | Add responsibilities to an object dynamically |
+| Facade | `structural/facade` | Expose a simplified interface over a subsystem |
+| Flyweight | `structural/flyweight` | Share fine-grained objects to reduce memory use |
+| Proxy | `structural/proxy` | Provide a surrogate that controls access to an object |
 
-### 🏗️ Creational Patterns (5)
+### Behavioral
 
-These patterns provide various object creation mechanisms, which increase flexibility and reuse of existing code.
+| Pattern | Module | Intent |
+|---|---|---|
+| Chain of Responsibility | `behavioral/chainOfResponsibility` | Pass a request along a chain of handlers |
+| Command | `behavioral/command` | Encapsulate a request as an object |
+| Interpreter | `behavioral/interpreter` | Evaluate sentences of a small language |
+| Iterator | `behavioral/iterator` | Traverse a collection without exposing its structure |
+| Mediator | `behavioral/mediator` | Centralize communication between objects |
+| Memento | `behavioral/memento` | Capture and restore an object's state |
+| Observer | `behavioral/observer` | Notify dependents when a subject changes |
+| State | `behavioral/state` | Alter behavior when internal state changes |
+| Strategy | `behavioral/strategy` | Make a family of algorithms interchangeable |
+| Template Method | `behavioral/templateMethod` | Define an algorithm skeleton, defer steps to subclasses |
+| Visitor | `behavioral/visitor` | Add operations to a type hierarchy without changing it |
 
-| Pattern | Description | Link |
-|---------|-------------|------|
-| **🏭 Abstract Factory** | Provides an interface for creating families of related objects | [View](design-patterns/creational/abstractFactory) |
-| **🔨 Builder** | Constructs complex objects step by step | [View](design-patterns/creational/builder) |
-| **🏭 Factory Method** | Creates objects without specifying the exact class | [View](design-patterns/creational/factoryMethod) |
-| **📋 Prototype** | Creates objects by cloning existing instances | [View](design-patterns/creational/prototype) |
-| **🔒 Singleton** | Ensures a class has only one instance | [View](design-patterns/creational/singleton) |
+## Architecture
 
-### 🏛️ Structural Patterns (7)
+```mermaid
+graph TD
+    Root["design-patterns-collection (parent POM)"]
 
-These patterns explain how to assemble objects and classes into larger structures while keeping these structures flexible and efficient.
+    Root --> C[Creational]
+    Root --> S[Structural]
+    Root --> B[Behavioral]
 
-| Pattern | Description | Link |
-|---------|-------------|------|
-| **🔌 Adapter** | Allows incompatible interfaces to work together | [View](design-patterns/structural/adapter) |
-| **🌉 Bridge** | Separates abstraction from implementation | [View](design-patterns/structural/bridge) |
-| **🌳 Composite** | Composes objects into tree structures | [View](design-patterns/structural/composite) |
-| **🎨 Decorator** | Adds behavior to objects dynamically | [View](design-patterns/structural/decorator) |
-| **🏢 Facade** | Provides a simplified interface to a complex subsystem | [View](design-patterns/structural/facade) |
-| **🪶 Flyweight** | Shares state to support large numbers of fine-grained objects | [View](design-patterns/structural/flyweight) |
-| **🎭 Proxy** | Provides a placeholder for another object | [View](design-patterns/structural/proxy) |
+    C --> C1[Abstract Factory]
+    C --> C2[Builder]
+    C --> C3[Factory Method]
+    C --> C4[Prototype]
+    C --> C5[Singleton]
 
-### 🎭 Behavioral Patterns (11)
+    S --> S1[Adapter]
+    S --> S2[Bridge]
+    S --> S3[Composite]
+    S --> S4[Decorator]
+    S --> S5[Facade]
+    S --> S6[Flyweight]
+    S --> S7[Proxy]
 
-These patterns are concerned with algorithms and the assignment of responsibilities between objects.
-
-| Pattern | Description | Link |
-|---------|-------------|------|
-| **⛓️ Chain of Responsibility** | Passes requests along a chain of handlers | [View](design-patterns/behavioral/chainOfResponsibility) |
-| **📝 Command** | Encapsulates requests as objects | [View](design-patterns/behavioral/command) |
-| **🔤 Interpreter** | Defines a representation for grammar and an interpreter | [View](design-patterns/behavioral/interpreter) |
-| **🔄 Iterator** | Provides a way to access elements of a collection | [View](design-patterns/behavioral/iterator) |
-| **🤝 Mediator** | Defines how objects interact with each other | [View](design-patterns/behavioral/mediator) |
-| **💾 Memento** | Captures and restores an object's internal state | [View](design-patterns/behavioral/memento) |
-| **👀 Observer** | Notifies multiple objects about state changes | [View](design-patterns/behavioral/observer) |
-| **🔄 State** | Allows an object to alter its behavior when its internal state changes | [View](design-patterns/behavioral/state) |
-| **⚔️ Strategy** | Defines a family of algorithms and makes them interchangeable | [View](design-patterns/behavioral/strategy) |
-| **📄 Template Method** | Defines the skeleton of an algorithm | [View](design-patterns/behavioral/templateMethod) |
-| **👨‍💼 Visitor** | Separates algorithms from the objects they operate on | [View](design-patterns/behavioral/visitor) |
-
-## 🚀 Getting Started
-
-### 📋 Prerequisites
-
-Before you begin, ensure you have the following installed:
-
-- **☕ Java Development Kit (JDK) 11 or higher**
-  - Download from [Oracle](https://www.oracle.com/java/technologies/downloads/) or [OpenJDK](https://openjdk.org/)
-  - Verify installation: `java -version`
-
-- **📦 Apache Maven 3.6 or higher**
-  - Download from [Maven Website](https://maven.apache.org/download.cgi)
-  - Verify installation: `mvn -version`
-
-- **🔀 Git** (for cloning the repository)
-  - Download from [Git Website](https://git-scm.com/downloads)
-
-### 💻 Installation
-
-1. **Clone the repository**
-   ```bash
-   git clone https://github.com/fabricioguidine/repository-organizer.git
-   cd repository-organizer
-   ```
-
-2. **Verify your environment**
-   ```bash
-   java -version
-   mvn -version
-   ```
-
-3. **Build the project**
-   ```bash
-   mvn clean install
-   ```
-
-## 🔨 Building and Testing
-
-### 🏗️ Build All Patterns
-
-To build all design patterns at once:
-
-```bash
-mvn clean install
+    B --> B1[Chain of Responsibility]
+    B --> B2[Command]
+    B --> B3[Interpreter]
+    B --> B4[Iterator]
+    B --> B5[Mediator]
+    B --> B6[Memento]
+    B --> B7[Observer]
+    B --> B8[State]
+    B --> B9[Strategy]
+    B --> B10[Template Method]
+    B --> B11[Visitor]
 ```
 
-This will compile all patterns, run all tests, and package the artifacts.
+The root `pom.xml` is a `pom`-packaged aggregator that declares all 23 modules and centralizes dependency and plugin management (JUnit 5, AssertJ, JaCoCo, Spotless, Checkstyle, SpotBugs).
 
-### 📦 Build Individual Pattern
+## Requirements
 
-Navigate to a specific pattern directory and build:
+- JDK 17 or higher (CI builds against 17 and 21)
+- Apache Maven 3.6+
 
-```bash
-cd design-patterns/creational/abstractFactory
-mvn clean install
+Verify your toolchain:
+
+```powershell
+java -version
+mvn -version
 ```
 
-### 🧪 Run All Tests
+## Build and run
 
-```bash
-mvn test
+All commands run from the repository root and apply across every module.
+
+Build and test the whole project:
+
+```powershell
+mvn -B verify
 ```
 
-### 🎯 Run Tests for Specific Pattern
+Compile and install all modules without running tests:
 
-```bash
-cd design-patterns/creational/singleton
-mvn test
+```powershell
+mvn -B clean install -DskipTests
 ```
 
-### 🔍 Run Specific Test Class
+Run the full test suite:
 
-```bash
-cd design-patterns/creational/abstractFactory
-mvn test -Dtest=EmployeeTest
+```powershell
+mvn -B test
 ```
 
-### ⏭️ Build Without Tests
+Build a single pattern (example: Singleton):
 
-```bash
-mvn clean install -DskipTests
+```powershell
+mvn -B -pl design-patterns/creational/singleton -am verify
 ```
 
-## 📁 Project Structure
+Run the quality profile (Spotless, Checkstyle, SpotBugs):
 
+```powershell
+mvn -B verify -Pquality
 ```
-repository-organizer/
+
+## Project structure
+
+```text
+design-patterns-with-java/
+├── pom.xml                       # Parent aggregator POM (23 modules)
+├── config/                       # Checkstyle, SpotBugs config
 ├── design-patterns/
-│   ├── creational/
-│   │   ├── abstractFactory/
-│   │   ├── builder/
-│   │   ├── factoryMethod/
-│   │   ├── prototype/
-│   │   └── singleton/
-│   ├── structural/
-│   │   ├── adapter/
-│   │   ├── bridge/
-│   │   ├── composite/
-│   │   ├── decorator/
-│   │   ├── facade/
-│   │   ├── flyweight/
-│   │   └── proxy/
-│   └── behavioral/
-│       ├── chainOfResponsibility/
-│       ├── command/
-│       ├── interpreter/
-│       ├── iterator/
-│       ├── mediator/
-│       ├── memento/
-│       ├── observer/
-│       ├── state/
-│       ├── strategy/
-│       ├── templateMethod/
-│       └── visitor/
-├── pom.xml                    # Parent Maven POM
-├── LICENSE                    # MIT License
-└── README.md                  # This file
+│   ├── creational/               # abstractFactory, builder, factoryMethod, prototype, singleton
+│   ├── structural/               # adapter, bridge, composite, decorator, facade, flyweight, proxy
+│   └── behavioral/               # chainOfResponsibility, command, interpreter, iterator,
+│                                 # mediator, memento, observer, state, strategy,
+│                                 # templateMethod, visitor
+├── .github/workflows/ci.yml      # Build, test, and quality CI
+└── LICENSE
 ```
 
-Each pattern follows a standard Maven project structure:
+Each module follows the standard Maven layout:
 
-```
-<pattern-name>/
-├── pom.xml                    # Maven project configuration
-├── src/
-│   ├── main/java/org/example/ # Source code with JavaDoc
-│   └── test/java/             # Comprehensive unit tests
-```
-
-## 💡 Usage Examples
-
-### 🏭 Abstract Factory Pattern
-
-```java
-// Create a factory for internal employees
-AbstractFactory factory = new InternalEmployeeFactory();
-Employee employee = new Employee(factory);
-
-// Generate payroll and report
-String payroll = employee.generatePayroll();
-String report = employee.generateReport();
+```text
+<pattern>/
+├── pom.xml
+└── src/
+    ├── main/java/org/example/    # Pattern implementation
+    └── test/java/                # JUnit 5 tests
 ```
 
-### 🔒 Singleton Pattern
+## License
 
-```java
-// Get the singleton instance
-DatabaseConnection connection = DatabaseConnection.getInstance();
-connection.connect("jdbc:mysql://localhost:3306/mydb", "user", "password");
-```
-
-### ⚔️ Strategy Pattern
-
-```java
-// Create a user with different file format strategies
-User user = new User();
-String result = user.savePDF("document.pdf");
-String result2 = user.saveXML("data.xml");
-```
-
-### 🔨 Builder Pattern
-
-```java
-// Build a motorcycle step by step
-Motorcycle motorcycle = new MotorcycleBuilder()
-    .setBrand("Honda")
-    .setModel("CBR")
-    .setYear(2023)
-    .setColor("Red")
-    .setPrice(15000.0f)
-    .build();
-```
-
-## 📚 Pattern Categories
-
-### 🏗️ Creational Patterns
-
-These patterns provide various object creation mechanisms, which increase flexibility and reuse of existing code.
-
-**Key Patterns:**
-- **🏭 Abstract Factory**: Create families of related objects without specifying their concrete classes
-- **🔨 Builder**: Construct complex objects step by step with validation
-- **🏭 Factory Method**: Delegate object creation to subclasses
-- **📋 Prototype**: Clone objects for creation instead of creating new instances
-- **🔒 Singleton**: Ensure a class has only one instance with global access
-
-### 🏛️ Structural Patterns
-
-These patterns explain how to assemble objects and classes into larger structures while keeping these structures flexible and efficient.
-
-**Key Patterns:**
-- **🔌 Adapter**: Make incompatible interfaces compatible
-- **🌉 Bridge**: Separate abstraction from implementation
-- **🌳 Composite**: Compose objects into tree structures to represent part-whole hierarchies
-- **🎨 Decorator**: Add responsibilities to objects dynamically
-- **🏢 Facade**: Provide a unified interface to a complex subsystem
-- **🪶 Flyweight**: Share state to reduce memory usage for large numbers of objects
-- **🎭 Proxy**: Control access to objects, providing a placeholder
-
-### 🎭 Behavioral Patterns
-
-These patterns are concerned with algorithms and the assignment of responsibilities between objects.
-
-**Key Patterns:**
-- **⛓️ Chain of Responsibility**: Pass requests along a chain of handlers
-- **📝 Command**: Encapsulate requests as objects
-- **🔤 Interpreter**: Define grammar representation and interpreter
-- **🔄 Iterator**: Access elements of a collection sequentially
-- **🤝 Mediator**: Define how objects interact with each other
-- **💾 Memento**: Capture and restore an object's internal state
-- **👀 Observer**: Notify multiple objects about state changes
-- **🔄 State**: Alter an object's behavior when its internal state changes
-- **⚔️ Strategy**: Define a family of algorithms and make them interchangeable
-- **📄 Template Method**: Define the skeleton of an algorithm
-- **👨‍💼 Visitor**: Separate algorithms from the objects they operate on
-
-## 🤝 Contributing
-
-This project welcomes contributions and suggestions. Most contributions require you to agree to a Contributor License Agreement (CLA) declaring that you have the right to, and actually do, grant us the rights to use your contribution.
-
-### 📝 How to Contribute
-
-1. **🍴 Fork the repository**
-   ```bash
-   git fork https://github.com/fabricioguidine/repository-organizer.git
-   ```
-
-2. **🌿 Create a feature branch**
-   ```bash
-   git checkout -b feature/your-feature-name
-   ```
-
-3. **✏️ Make your changes**
-   - Follow Java naming conventions
-   - Add JavaDoc comments for all public classes and methods
-   - Write unit tests for all new code
-   - Ensure all tests pass
-
-4. **💾 Commit your changes**
-   ```bash
-   git commit -m "Add: Description of your changes"
-   ```
-
-5. **📤 Push to your branch**
-   ```bash
-   git push origin feature/your-feature-name
-   ```
-
-6. **🔄 Open a Pull Request**
-   - Provide a clear description of your changes
-   - Reference any related issues
-   - Ensure all CI checks pass
-
-### 📋 Code Style Guidelines
-
-- Follow Java naming conventions (PascalCase for classes, camelCase for methods)
-- Add JavaDoc comments for all public classes and methods
-- Write unit tests with JUnit 5 for all new code
-- Use `@DisplayName` annotations for better test readability
-- Ensure all tests pass before submitting
-- Add input validation where appropriate
-- Handle exceptions properly
-
-### 🐛 Reporting Issues
-
-If you find a bug or have a suggestion, please open an issue on GitHub with:
-- A clear title and description
-- Steps to reproduce (for bugs)
-- Expected vs actual behavior
-- Environment details (Java version, Maven version, OS)
-
-## 📄 License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
-
+Released under the [MIT License](LICENSE).
