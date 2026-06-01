@@ -7,4 +7,5 @@
     <!-- Allow longer lines and looser style in test sources. -->
     <suppress checks="LineLength" files=".*[\\/]src[\\/]test[\\/].*"/>
     <suppress checks="UnusedImports" files=".*[\\/]src[\\/]test[\\/].*"/>
+    <suppress checks="AvoidStarImport" files=".*[\\/]src[\\/]test[\\/].*"/>
 </suppressions>
