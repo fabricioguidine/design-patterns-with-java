@@ -101,13 +101,14 @@ jobs:
         shell: bash
         run: ./mvnw -B -ntp spotless:check
 
-      - name: Checkstyle check
-        # TODO: baseline checkstyle violations exist on agent-generated code;
-        # surface as warnings until maintainer ratchets.
+      - name: Checkstyle report
+        # Baseline checkstyle violations exist on agent-generated code; the report
+        # goal surfaces them to the console without failing the build. Maintainer
+        # ratchets to checkstyle:check once the baseline is cleaned up.
         shell: bash
-        run: ./mvnw -B -ntp -Dcheckstyle.failOnViolation=false checkstyle:check
+        run: ./mvnw -B -ntp -Dcheckstyle.consoleOutput=true checkstyle:checkstyle
 
-      - name: SpotBugs check
-        # TODO: SpotBugs findings against generated code surface as warnings.
+      - name: SpotBugs report
+        # SpotBugs findings against generated code surface as a report, not a gate.
         shell: bash
-        run: ./mvnw -B -ntp -DskipTests -Dspotbugs.failOnError=false compile spotbugs:check
+        run: ./mvnw -B -ntp -DskipTests compile spotbugs:spotbugs
