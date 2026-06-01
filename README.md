@@ -2,13 +2,7 @@
 
 <img src=".github/assets/banner.svg" alt="design-patterns-with-java" width="100%" />
 
-[![CI](https://github.com/fabricioguidine/design-patterns-with-java/actions/workflows/ci.yml/badge.svg)](https://github.com/fabricioguidine/design-patterns-with-java/actions/workflows/ci.yml)
-
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
-
-[![Java](https://img.shields.io/badge/Java-17+-orange.svg?logo=openjdk&logoColor=white)](https://openjdk.org)
-
-[![Maven](https://img.shields.io/badge/build-Maven-C71A36.svg?logo=apachemaven&logoColor=white)](https://maven.apache.org)
+[![CI](https://github.com/fabricioguidine/design-patterns-with-java/actions/workflows/ci.yml/badge.svg)](https://github.com/fabricioguidine/design-patterns-with-java/actions/workflows/ci.yml) [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE) [![Java](https://img.shields.io/badge/Java-17+-orange.svg?logo=openjdk&logoColor=white)](https://openjdk.org) [![Maven](https://img.shields.io/badge/build-Maven-C71A36.svg?logo=apachemaven&logoColor=white)](https://maven.apache.org)
 
 </div>
 
