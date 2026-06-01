@@ -1,0 +1,16 @@
+* text=auto eol=lf
+
+# Maven wrapper: keep platform-appropriate line endings and executability
+mvnw text eol=lf
+*.sh text eol=lf
+mvnw.cmd text eol=crlf
+*.cmd text eol=crlf
+*.bat text eol=crlf
+
+# Binary files
+*.jar binary
+*.class binary
+*.png binary
+*.jpg binary
+*.gif binary
+*.ico binary
