@@ -2,65 +2,79 @@ name: CI
 
 on:
   push:
-    branches: [main, master]
+    branches: [main]
   pull_request:
-    branches: [main, master]
-  workflow_dispatch:
+
+permissions:
+  contents: read
 
 concurrency:
   group: ${{ github.workflow }}-${{ github.ref }}
   cancel-in-progress: true
 
-permissions:
-  contents: read
-
 jobs:
   build:
-    name: Build & Test (JDK ${{ matrix.java }})
-    runs-on: ubuntu-latest
+    name: Build & Test (${{ matrix.os }}, JDK ${{ matrix.java-version }})
+    runs-on: ${{ matrix.os }}
     strategy:
       fail-fast: false
       matrix:
-        java: ['17', '21']
+        os: [ubuntu-latest, macos-latest, windows-latest]
+        java-version: ['17', '21']
 
     steps:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Set up JDK ${{ matrix.java }}
+      - name: Set up JDK ${{ matrix.java-version }}
         uses: actions/setup-java@v4
         with:
           distribution: 'temurin'
-          java-version: ${{ matrix.java }}
+          java-version: ${{ matrix.java-version }}
           cache: maven
 
       - name: Build and run tests
-        # TODO: agent-generated tests have widespread assertion mismatches vs
-        # actual implementations across the 23 GoF pattern modules. Failures
-        # are uploaded as artifacts; build does not fail until tests are
-        # individually triaged by the maintainer.
-        run: mvn -B -ntp -Dmaven.test.failure.ignore=true verify
+        shell: bash
+        run: ./mvnw -B -ntp test
 
       - name: Upload test results
         if: always()
         uses: actions/upload-artifact@v4
         with:
-          name: test-results-jdk-${{ matrix.java }}
+          name: test-results-${{ matrix.os }}-jdk-${{ matrix.java-version }}
           path: '**/target/surefire-reports/*.xml'
           if-no-files-found: ignore
 
+  coverage:
+    name: Coverage (ubuntu-latest, JDK 17)
+    runs-on: ubuntu-latest
+    needs: build
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up JDK 17
+        uses: actions/setup-java@v4
+        with:
+          distribution: 'temurin'
+          java-version: '17'
+          cache: maven
+
+      - name: Build with coverage
+        shell: bash
+        run: ./mvnw -B -ntp verify
+
       - name: Upload JaCoCo coverage to Codecov
-        if: matrix.java == '17'
         uses: codecov/codecov-action@v4
         with:
           files: '**/target/site/jacoco/jacoco.xml'
           fail_ci_if_error: false
           flags: unittests
-          name: codecov-${{ matrix.java }}
+          name: codecov
           token: ${{ secrets.CODECOV_TOKEN }}
 
       - name: Upload coverage artifact
-        if: matrix.java == '17'
         uses: actions/upload-artifact@v4
         with:
           name: jacoco-coverage
@@ -84,13 +98,16 @@ jobs:
           cache: maven
 
       - name: Spotless check (formatting)
-        run: mvn -B -ntp spotless:check
+        shell: bash
+        run: ./mvnw -B -ntp spotless:check
 
       - name: Checkstyle check
         # TODO: baseline checkstyle violations exist on agent-generated code;
         # surface as warnings until maintainer ratchets.
-        run: mvn -B -ntp -Dcheckstyle.failOnViolation=false checkstyle:check
+        shell: bash
+        run: ./mvnw -B -ntp -Dcheckstyle.failOnViolation=false checkstyle:check
 
       - name: SpotBugs check
         # TODO: SpotBugs findings against generated code surface as warnings.
-        run: mvn -B -ntp -DskipTests -Dspotbugs.failOnError=false compile spotbugs:check
+        shell: bash
+        run: ./mvnw -B -ntp -DskipTests -Dspotbugs.failOnError=false compile spotbugs:check

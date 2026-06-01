@@ -19,8 +19,12 @@ A multi-module Maven project where every classic GoF design pattern lives in its
 - [Architecture](#architecture)
 - [Requirements](#requirements)
 - [Build and run](#build-and-run)
+- [Testing](#testing)
+- [Cross-platform note](#cross-platform-note)
 - [Project structure](#project-structure)
 - [License](#license)
+
+See [ARCHITECTURE.md](ARCHITECTURE.md) for the full pattern catalog and build/test layout.
 
 ## Patterns implemented
 
@@ -106,54 +110,76 @@ The root `pom.xml` is a `pom`-packaged aggregator that declares all 23 modules a
 ## Requirements
 
 - JDK 17 or higher (CI builds against 17 and 21)
-- Apache Maven 3.6+
+- No local Maven install required — the project ships the [Maven Wrapper](https://maven.apache.org/wrapper/) (`mvnw` / `mvnw.cmd`), which downloads a pinned Maven for you on first use.
 
 Verify your toolchain:
 
-```powershell
+```bash
 java -version
-mvn -version
 ```
 
 ## Build and run
 
-All commands run from the repository root and apply across every module.
+All commands run from the repository root and apply across every module. The
+wrapper builds identically on Linux, macOS, and Windows.
 
-Build and test the whole project:
+**Linux / macOS** (or Git Bash / WSL on Windows):
 
-```powershell
-mvn -B verify
+```bash
+./mvnw -B verify          # build + test + coverage
+./mvnw -B test            # run the full test suite
+./mvnw -B clean install -DskipTests   # compile + install, skip tests
 ```
 
-Compile and install all modules without running tests:
+**Windows** (PowerShell / cmd):
 
 ```powershell
-mvn -B clean install -DskipTests
-```
-
-Run the full test suite:
-
-```powershell
-mvn -B test
+.\mvnw.cmd -B verify
+.\mvnw.cmd -B test
+.\mvnw.cmd -B clean install -DskipTests
 ```
 
 Build a single pattern (example: Singleton):
 
-```powershell
-mvn -B -pl design-patterns/creational/singleton -am verify
+```bash
+./mvnw -B -pl design-patterns/creational/singleton -am verify
 ```
 
 Run the quality profile (Spotless, Checkstyle, SpotBugs):
 
-```powershell
-mvn -B verify -Pquality
+```bash
+./mvnw -B verify -Pquality
 ```
+
+## Testing
+
+Every pattern module ships JUnit 5 end-to-end tests under `src/test/java` that
+exercise each pattern's public behavior (for example: the Factory Method
+returns the correct concrete service, Observer notifications propagate to
+applicants, Strategy swapping changes the output, the Singleton returns one
+identity, and Decorator composition accumulates price and customization). Run
+them all with:
+
+```bash
+./mvnw -B test        # ./mvnw.cmd -B test on Windows
+```
+
+Test reports are written to each module's `target/surefire-reports/`. Coverage
+(JaCoCo) is produced by `./mvnw -B verify` under `target/site/jacoco/`.
+
+## Cross-platform note
+
+The build is verified on Linux, macOS, and Windows against JDK 17 and 21 via
+the CI matrix. Sources read no OS-specific file paths and rely only on the JDK
+and the Maven Wrapper, so a clean checkout builds the same way on every
+platform — only the wrapper launcher differs (`./mvnw` vs `.\mvnw.cmd`).
 
 ## Project structure
 
 ```text
 design-patterns-with-java/
 ├── pom.xml                       # Parent aggregator POM (23 modules)
+├── mvnw, mvnw.cmd, .mvn/         # Maven Wrapper (no local Maven needed)
 ├── config/                       # Checkstyle, SpotBugs config
 ├── design-patterns/
 │   ├── creational/               # abstractFactory, builder, factoryMethod, prototype, singleton

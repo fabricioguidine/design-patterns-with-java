@@ -27,17 +27,19 @@ class MorseTest {
     }
 
     @Test
-    @DisplayName("Should convert integer to Morse code")
-    void shouldConvertIntegerToMorseCode() {
+    @DisplayName("Should round-trip Morse code for five through the adapter")
+    void shouldRoundTripMorseCodeForFive() {
         // Arrange
         Morse morse = new Morse();
 
         // Act
-        morse.setNumber("5");
+        morse.setNumber(".....");
+        int num = morse.getNum();
         String result = morse.getNumber();
 
         // Assert
-        assertEquals("-----", result);
+        assertEquals(5, num);
+        assertEquals(".....", result);
     }
 
     @Test
