@@ -21,7 +21,7 @@ public class ServiceFactory {
         Class<?> serviceClass = null;
         Object serviceObject = null;
         try {
-            serviceClass = Class.forName("org.example.Service" + service);
+            serviceClass = Class.forName("org.example." + service + "Service");
             serviceObject = serviceClass.getDeclaredConstructor().newInstance();
         } catch (Exception ex) {
             throw new IllegalArgumentException("Service does not exist: " + service);
