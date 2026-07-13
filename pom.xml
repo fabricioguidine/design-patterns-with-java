@@ -33,7 +33,7 @@
         <jacoco.plugin.version>0.8.12</jacoco.plugin.version>
         <spotless.plugin.version>2.43.0</spotless.plugin.version>
         <checkstyle.plugin.version>3.3.1</checkstyle.plugin.version>
-        <checkstyle.version>10.14.2</checkstyle.version>
+        <checkstyle.version>13.8.0</checkstyle.version>
         <spotbugs.plugin.version>4.8.3.1</spotbugs.plugin.version>
         <palantir.format.version>2.39.0</palantir.format.version>
     </properties>
